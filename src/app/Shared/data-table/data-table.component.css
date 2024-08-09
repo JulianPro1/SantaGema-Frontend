@@ -1,0 +1,91 @@
+:host{
+    width: 100%;
+
+& table {
+    width: 100%;
+    text-align: center;
+    font-size: .9rem;
+    padding: 0 .5rem;
+    border-collapse: collapse;
+
+    & tr {
+        padding: .5rem 0;
+    }
+
+    & th {
+        padding: .5rem 0;
+    }
+
+    & td {
+        margin: 0 .5rem;
+        padding: .8rem .3rem;
+    }
+
+    & img[alt="Añadir-Afiliado"] {
+        width: 30px;
+        height: 30px;
+        color: #3fff00;
+        cursor: pointer;
+    }
+
+    & .status {
+        padding: .5rem 1.5rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        border-radius: 20px;
+        background-color: #7cd29a;
+    }
+
+    & .icon-datatable {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        width: 80%;
+        padding: 0 .5rem;
+        gap: 1.5rem;
+
+        & a {
+            text-decoration: none;
+            position: relative;
+
+            & img {
+                width: 30px;
+            }
+
+            & .tooltip {
+                display: none;
+                position: absolute;
+                left: -2rem;
+                right: -2rem;
+                bottom: 2.5rem;
+                z-index: 500;
+                text-align: center;
+                padding: .3rem .2rem;
+                border-radius: 10px;
+                font-size: .6rem;
+                color: white;
+                background-color: black;
+                transition: all .5s;
+            }
+
+            & .tooltip::after {
+                content: '';
+                position: absolute;
+                display: block;
+                left: calc(50% - 10px);
+                border-top: 10px solid black;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+        }
+
+        & a:hover .tooltip {
+            display: inline-block;
+            transition: all 1s;
+        }
+    }
+
+}
+
+}
+
