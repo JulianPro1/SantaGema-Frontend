@@ -1,9 +1,11 @@
-:host{
-    width: 100%;
+.container-sections{
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding: 0 2rem;
+    width: 100%;
 
     & h1{
         font-size: 2.5rem;

@@ -1,0 +1,113 @@
+
+
+.container-login {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+    & form {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        padding: 2.5rem 0;
+        border-radius: 15px;
+        box-shadow: 4px 6px 8px black;
+    }
+
+    & h1 {
+        font-family: "Montserrat", sans-serif;
+        margin: 2rem 0 0 0;
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    & h2 {
+        font-family: "Montserrat", sans-serif;
+        margin: 1rem 0 2rem 0;
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    & .container-inputs {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: min(10rem, 40%);
+        margin: 1.5rem 0;
+
+        & input {
+            border: none;
+            border-bottom: 2px solid;
+            margin: .5rem 0;
+            background: transparent;
+            outline: none;
+        }
+
+        & label {
+            position: absolute;
+            top: 0;
+            left: 5%;
+            transform: translateY(60%);
+            font-size: .7rem;
+            letter-spacing: 1px;
+            pointer-events: none;
+            transition: .4s;
+        }
+
+        & input:focus-visible~label {
+            top: 0;
+            left: 5%;
+            transform: translateY(-50%);
+            font-size: .5rem;
+            padding: 0 0;
+            transition: .4s;
+        }
+
+        & input:not(:placeholder-shown)~label {
+            top: 0;
+            left: 5%;
+            transform: translateY(-50%);
+            font-size: .5rem;
+            padding: 0 0;
+            transition: .3s
+        }
+    }
+
+    & .btn {
+        display: block;
+        width: 60%;
+        padding: .5rem 0;
+        margin: 2.5rem 0 0 0;
+        border-radius: 20px;
+        color: aliceblue;
+        background-color: #004AAD;
+        cursor: pointer;
+        transition: all .5s;
+    }
+
+}
+
+.container-background {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    border: none;
+    background-image: linear-gradient(rgb(5 7 12 / 30%), rgb(5 7 12 / 40%)), url(../../../../public/assets/images/Image-login.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
