@@ -1,9 +1,10 @@
 import { Component,input} from '@angular/core';
+import {AsideBarComponent} from '../../Shared/aside-bar/aside-bar.component';
 
 @Component({
   selector: 'app-data-table',
   standalone: true,
-  imports: [],
+  imports: [AsideBarComponent],
   templateUrl: './data-table.component.html',
   styleUrl: './data-table.component.css'
 })
