@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './gestion-grupo-familiar.component.html',
   styleUrl: './gestion-grupo-familiar.component.css'
 })
-export class GestionGrupoFamiliarComponent {
+export default class GestionGrupoFamiliarComponent {
 
 }

@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './gestion-contratos.component.html',
   styleUrl: './gestion-contratos.component.css'
 })
-export class GestionContratosComponent {
+export default class GestionContratosComponent {
 
 }

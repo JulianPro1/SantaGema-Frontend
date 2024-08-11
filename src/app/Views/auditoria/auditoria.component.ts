@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './auditoria.component.html',
   styleUrl: './auditoria.component.css'
 })
-export class AuditoriaComponent {
+export default class AuditoriaComponent {
 
 }

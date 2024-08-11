@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './facturacion-dash.component.html',
   styleUrl: './facturacion-dash.component.css'
 })
-export class FacturacionDashComponent {
+export default class FacturacionDashComponent {
 
 }

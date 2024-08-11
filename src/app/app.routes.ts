@@ -14,13 +14,25 @@ export const routes: Routes = [
         path: 'facturacion',
         loadComponent: () => import ('./Views/facturacion/facturacion.component')
     }
-    // {
-    //     path: 'aside',
-    //     loadComponent: () => import('./Shared/aside-bar/aside-bar.component').then((mod) => mod.AsideBarComponent)
-    // },
-    // {
-    //     path: 'data',
-    //     loadComponent: () => import('./Shared/data-table/data-table.component').then((mod) => mod.DataTableComponent)
-    // }
+    ,
+    {
+        path: 'auditoria',
+        loadComponent: () => import ('./Views/auditoria/auditoria.component')
+    }
+    ,
+    {
+        path: 'gestionContratos',
+        loadComponent: () => import ('./Views/gestion-contratos/gestion-contratos.component')
+    }
+    ,
+    {
+        path: 'facturacionDash',
+        loadComponent: () => import ('./Views/facturacion-dash/facturacion-dash.component')
+    }
+    ,
+    {
+        path: 'gestionGrupoFamiliar',
+        loadComponent: () => import ('./Views/gestion-grupo-familiar/gestion-grupo-familiar.component')
+    }
 
 ];
