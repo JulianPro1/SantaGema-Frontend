@@ -26,8 +26,4 @@ ngAfterViewInit(){
   }
 
 
-
 }
-
-
-

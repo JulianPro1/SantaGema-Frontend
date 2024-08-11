@@ -8,11 +8,11 @@ export const routes: Routes = [
     },
     {
         path: 'afiliados',
-        loadComponent: () => import('./components/gestion-afiliado/gestion-afiliado.component')
+        loadComponent: () => import('./Views/gestion-afiliado/gestion-afiliado.component')
     },
     {
         path: 'facturacion',
-        loadComponent: () => import ('./components/facturacion/facturacion.component')
+        loadComponent: () => import ('./Views/facturacion/facturacion.component')
     }
     // {
     //     path: 'aside',
