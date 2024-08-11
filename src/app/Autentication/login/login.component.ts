@@ -6,7 +6,7 @@ import { ButtonComponent } from "../../Shared/button/button.component";
   standalone: true,
   imports: [ButtonComponent],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
 })
 export default class LoginComponent {
   @ViewChild(ButtonComponent) btn ?: ElementRef

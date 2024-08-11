@@ -8,8 +8,11 @@
         width: 50%;
         border: none;
         color: aliceblue;
-        background-color: #004AAD;
+        background-color: var(--senary-color);
         padding: .5rem 0;
         border-radius: 20px;
+    }
+    & button:hover{
+        background-color: #00357a;
     }
 }

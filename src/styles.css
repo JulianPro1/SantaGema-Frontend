@@ -1,12 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,400&family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-:root{
-
+:root {
+    --primary-color: #0C3D14;
+    --secondary-color: #126320;
+    --tertiary-color: #199147;
+    --quaternary-color: #C3D230;
+    --quinary-color: #FDF339;
+    --senary-color: #004AAD;
+    --black-color: #0c0404;
+    --gray-color: #F5F5F5;
+    --cream-color: #f5f5dc;
 }
 
-*{
-    padding: 0;
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #199147c5;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--tertiary-color);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    line-height: 1.5;
 }
 
-    
+body {
+    background-color: var(--gray-color);
+    /* background-color: var(--cream-color); */
+    /* padding-left: 17.5rem; */
+    /* con este padding-left si esta todo centrau  
+    ojito con esto que esta tumbando el login
+    */
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray-color);
+}
+
+h1 {
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-weight: 200;
+    text-transform: capitalize;
+}
+
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    flex-flow: column;
+    padding: 10rem 2rem;
+    width: 17.5rem;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    width: 130%;
+}
+
+.navbar a {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: var(--gray-color);
+    /* color: var(--quinary-color); */
+}
+
+.navbar a:hover {
+    background-color: var(--primary-color);
+}
+
+.navbar a i {
+    margin-right: 0.5rem;
+}
+
+.fixed-inicio {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.center-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.btn {
+    width: 15%;
+    border: none;
+    color: white;
+    background-color: var(--senary-color);
+    padding: .5rem 0;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background-color: #00357a;
+}
+
+/* .dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    gap: 5rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 14px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+}
+.card:hover{
+    filter: none;
+    background-color: var(--gray-color);
+} */
