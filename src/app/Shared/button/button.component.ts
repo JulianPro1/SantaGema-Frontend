@@ -1,10 +1,11 @@
-import { Component ,input, Directive} from '@angular/core';
-import { CustomWidthDirective } from "../../Directives/custom-width.directive";
+import { Component ,input} from '@angular/core';
+import { NgStyle } from "@angular/common";
+
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [ CustomWidthDirective],
+  imports: [NgStyle ],
   templateUrl: './button.component.html',
   styleUrl: './button.component.css'
 })
