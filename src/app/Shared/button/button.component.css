@@ -4,15 +4,15 @@
     width: 100%;
 
     & button{
-        display: block;
-        width: 50%;
         border: none;
         color: aliceblue;
         background-color: var(--senary-color);
         padding: .5rem 0;
         border-radius: 20px;
+        cursor: pointer;
     }
     & button:hover{
         background-color: #00357a;
+        transform: scale(1.05);
     }
 }

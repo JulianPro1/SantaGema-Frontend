@@ -1,0 +1,49 @@
+:host{
+    display: flex;
+    justify-content: space-around;
+    align-items: space-between;
+    /*controla el ancho de attach*/
+    width: 100%;
+    gap: 4rem;
+    padding: 1rem 2rem;
+
+    & .container-personalData {
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        padding: .5rem 1rem;
+        width: 50%;
+    }
+
+    & .container-attach {
+        display: flex;
+        flex-direction: column;
+        align-items:end;
+        justify-content: center;
+        gap: .5rem;
+        padding: .5rem  1rem;
+        width: 50%;
+        transition: all .1ms;
+
+        & h3{
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            align-self: center;
+        }
+
+        & .container-image{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: .5rem 0;
+            transition: all .1ms;
+
+            & img{
+                width: 90%;
+                filter: drop-shadow(0 0 2px);
+            }
+        }
+    }
+}

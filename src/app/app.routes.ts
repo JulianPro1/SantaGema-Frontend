@@ -34,5 +34,10 @@ export const routes: Routes = [
         path: 'gestionGrupoFamiliar',
         loadComponent: () => import ('./Views/gestion-grupo-familiar/gestion-grupo-familiar.component')
     }
+    ,
+    {
+        path: 'gestionAfiliadoEspecifico',
+        loadComponent: () => import('./Views/gestion-afilado-e/gestion-afilado-e.component')
+    }
 
 ];
