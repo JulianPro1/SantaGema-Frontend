@@ -12,7 +12,7 @@ import { RouterLink } from "@angular/router";
 export class DataTableComponent {
   T_heads = input.required<string[]>();
 
-  rutaInfo = input.required<string>();
+  rutaInfo = input<string>();
   ngOnInit(){
 
   }

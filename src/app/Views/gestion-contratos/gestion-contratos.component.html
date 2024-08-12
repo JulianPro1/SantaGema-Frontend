@@ -3,6 +3,14 @@
         <app-h1 tittle="Gestion de Contratos del Afiliado"></app-h1>
 
         <app-container-card renderizar="Contratos"></app-container-card>
+
+        <div class="container">
+            <app-h3 tittle="Grupo Familiar"></app-h3>
+            <div class="container-dataTable">
+                <app-data-table [T_heads]="encabezados"></app-data-table>
+            </div>
+        </div>
     </div>
+
     <app-aside-bar-user></app-aside-bar-user>
 </div>
