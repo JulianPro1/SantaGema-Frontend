@@ -10,7 +10,7 @@ import { NgStyle } from "@angular/common";
   styleUrl: './button.component.css'
 })
 export class ButtonComponent {
-
+tittle = input.required<string>();
 width = input.required<string>();
 
 constructor( ){

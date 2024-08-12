@@ -1,17 +1,15 @@
 <div class="body">
 
     <app-aside-bar-user></app-aside-bar-user>
-
-
     <!-- <app-aside-bar></app-aside-bar> -->
     <section class="container-sections">
         <app-h1 tittle="Gestion de Afiliados"></app-h1>
         <app-h2 tittle="Registro de Gestion de Afiliados"></app-h2>
     
         <div class="container">
-            <app-h3 tittle="Afiliados"></app-h3>
+            <app-h3 tittle="Afiliados" colorFont="white"></app-h3>
             <div class="container-dataTable">
-                <app-data-table [T_heads]='encabezados'></app-data-table>
+                <app-data-table [T_heads]='encabezados' [rutaInfo]="ruta"></app-data-table>
             </div>
         </div>
     </section>

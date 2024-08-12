@@ -17,4 +17,5 @@ import { H3Component } from "../../Shared/h3/h3.component";
 })
 export default class GestionAfiliadoComponent {
   encabezados:string[] = ['Nombre','Correo','Cedula','Fecha Pago','Estado'];
+  ruta:string = '/gestionAfiliadoEspecifico'
 }

@@ -1,0 +1,9 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 4px black inset, 4px 4px 4px black;
+    background-color: aliceblue;
+}
