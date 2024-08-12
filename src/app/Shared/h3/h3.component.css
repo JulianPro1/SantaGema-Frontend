@@ -1,0 +1,12 @@
+:host{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    & h3{
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: white;
+    }
+}

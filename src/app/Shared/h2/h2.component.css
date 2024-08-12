@@ -1,0 +1,13 @@
+:host{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    & h2{
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin: 0 0 2rem 0;
+    }
+}

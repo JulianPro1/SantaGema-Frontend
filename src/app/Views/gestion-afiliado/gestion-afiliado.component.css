@@ -10,33 +10,13 @@
     padding: 0 2rem;
     width: 100%;
 
-    & h1{
-        font-size: 2.5rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        margin: 3rem 0 0 0;
-    }
-
-    & h2 {
-        font-size: 1.5rem;
-        font-weight: 500;
-        letter-spacing: 2px;
-        margin: 0 0 2rem 0;
-    }
-
-    .container{
+    & .container{
         width: 100%;
         background-color: green;
         padding: 1rem;
         border-radius: 20px;
 
-        & h3{
-            font-size: 1.5rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            color: white;
-        }
-
+        
         & .container-dataTable{
             display: flex;
             flex-direction: column;
