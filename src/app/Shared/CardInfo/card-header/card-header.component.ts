@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,input } from '@angular/core';
 import { H2Component } from "../../h2/h2.component";
 import { ButtonComponent } from "../../button/button.component";
 import { ContentTextComponent } from "../content-text/content-text.component";
@@ -11,5 +11,5 @@ import { ContentTextComponent } from "../content-text/content-text.component";
   styleUrl: './card-header.component.css'
 })
 export class CardHeaderComponent {
-  
+  renderizar = input.required<string>();
 }

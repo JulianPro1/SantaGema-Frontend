@@ -2,16 +2,29 @@
     <div class="header-img">
     </div>
     <div class="header-info">
-        <app-h2 tittle="Informacion Del Afiliado [Codigo]"></app-h2>
-        <app-content-text strongText="Nombre:" pText="Jose Castellanos"></app-content-text>
-        <div class="container-text-compuesto">
-           <app-content-text strongText="Beneficiarios:" pText="1"></app-content-text>
-            <app-content-text strongText="Contratos:" pText="1"></app-content-text>
-        </div>
-        <span>Estado</span>
+        @if(renderizar() == 'Afiliados'){
+            <app-h2 tittle="Informacion Del Afiliado [Codigo]"></app-h2>
+            <app-content-text strongText="Nombre:" pText="Jose Castellanos"></app-content-text>
+            <div class="container-text-compuesto">
+               <app-content-text strongText="Beneficiarios:" pText="1"></app-content-text>
+                <app-content-text strongText="Contratos:" pText="1"></app-content-text>
+            </div>
+            <span>Estado</span>
+        }
+        @else if (renderizar() == 'Contratos') {
+            <app-h2 tittle="Numero de Contrato [Codigo]"></app-h2>
+            <app-content-text strongText="Nombre:" pText="Jose Castellanos"></app-content-text>
+            <app-content-text strongText="Direccion:" pText="Carrera 3 entre calles 57 y 58" whiteSpace="nowrap"></app-content-text>
+        }
+
     </div>
 
     <div class="header-buttons">
-        <app-button tittle="Facturas" width="100%"></app-button>
-        <app-button tittle="Contratos" width="100%"></app-button>
+        @if (renderizar() =='Afiliados') {
+            <app-button tittle="Facturas" width="100%"></app-button>
+            <app-button tittle="Contratos" width="100%"></app-button>
+        }
+        @else if (renderizar() == 'Contratos') {
+            <app-button tittle="PDF" width="100%"></app-button>
+        }
     </div>
