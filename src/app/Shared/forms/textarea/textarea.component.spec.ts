@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AccionesCreateComponent } from './acciones-create.component';
+import { TextareaComponent } from './textarea.component';
 
-describe('AccionesCreateComponent', () => {
-  let component: AccionesCreateComponent;
-  let fixture: ComponentFixture<AccionesCreateComponent>;
+describe('TextareaComponent', () => {
+  let component: TextareaComponent;
+  let fixture: ComponentFixture<TextareaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AccionesCreateComponent]
+      imports: [TextareaComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AccionesCreateComponent);
+    fixture = TestBed.createComponent(TextareaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
