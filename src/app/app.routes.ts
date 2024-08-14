@@ -46,6 +46,10 @@ export const routes: Routes = [
     {
         path: 'usuarios',
         loadComponent: () => import('./Views/gestion-usuarios/gestion-usuarios.component')
+    },
+    {
+        path: 'usuariosCreate',
+        loadComponent: () => import('./Views/gestion-usuarios-create/gestion-usuarios-create.component')
     }
 
 ];
