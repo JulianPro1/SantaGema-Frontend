@@ -1,0 +1,13 @@
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Dos columnas */
+    gap: 1rem; /* Espacio entre los checkboxes */
+}
+
+/* Estilos para los checkboxes */
+.checkbox-group input[type="checkbox"] {
+    /* Agrega tus estilos personalizados aquí */
+    /* Por ejemplo: */
+    margin-right: 0.5rem;
+    /* Otros estilos... */
+}
