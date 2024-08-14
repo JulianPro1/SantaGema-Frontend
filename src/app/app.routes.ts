@@ -42,6 +42,10 @@ export const routes: Routes = [
     {
         path: 'facturacionPago',
         loadComponent: () => import('./Views/facuracion-pago/facuracion-pago.component')
+    },
+    {
+        path: 'usuarios',
+        loadComponent: () => import('./Views/gestion-usuarios/gestion-usuarios.component')
     }
 
 ];
