@@ -149,6 +149,12 @@ aside {
     background-color: #00357a;
 }
 
+/* para eliminar las flechas de los input */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 /* .dashboard {
     display: flex;
     flex-wrap: wrap;

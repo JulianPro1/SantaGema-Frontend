@@ -1,0 +1,19 @@
+.container {
+    margin: 0 auto; /* Añade esta línea para centrar horizontalmente */
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 2rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    
+
+    & * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+}

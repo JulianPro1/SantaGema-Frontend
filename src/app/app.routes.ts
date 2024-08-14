@@ -38,6 +38,10 @@ export const routes: Routes = [
     {
         path: 'gestionAfiliadoEspecifico',
         loadComponent: () => import('./Views/gestion-afilado-e/gestion-afilado-e.component')
+    },
+    {
+        path: 'facturacionPago',
+        loadComponent: () => import('./Views/facuracion-pago/facuracion-pago.component')
     }
     ,
     {
