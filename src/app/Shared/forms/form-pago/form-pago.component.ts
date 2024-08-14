@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
 import {InputDesplegableComponent} from '../input-desplegable/input-desplegable.component';
 import {InputNumberComponent} from '../input-number/input-number.component';
+import {H1Component} from '../../h1/h1.component';
+import { H2Component } from '../../h2/h2.component';
+import { ButtonComponent } from "../../button/button.component";
 
 @Component({
   selector: 'app-form-pago',
   standalone: true,
   imports: [
     InputDesplegableComponent,
-    InputNumberComponent
-  ],
+    InputNumberComponent,
+    H1Component,
+    ButtonComponent,
+    H2Component
+],
   templateUrl: './form-pago.component.html',
   styleUrl: './form-pago.component.css'
 })
