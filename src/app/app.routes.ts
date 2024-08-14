@@ -39,5 +39,10 @@ export const routes: Routes = [
         path: 'gestionAfiliadoEspecifico',
         loadComponent: () => import('./Views/gestion-afilado-e/gestion-afilado-e.component')
     }
+    ,
+    {
+        path: 'gestionUsuarios',
+        loadComponent: () => import('./Views/gestion-usuarios/gestion-usuarios.component')
+    }
 
 ];

@@ -16,6 +16,6 @@ import { H3Component } from "../../Shared/h3/h3.component";
   styleUrl: './gestion-afiliado.component.css'
 })
 export default class GestionAfiliadoComponent {
-  encabezados:string[] = ['Nombre','Correo','Cedula','Fecha Pago','Estado'];
+  encabezados:string[] = ['Nombre','Correo','Cedula','Fecha Pago','Estado de Pago'];
   ruta:string = '/gestionAfiliadoEspecifico'
 }
