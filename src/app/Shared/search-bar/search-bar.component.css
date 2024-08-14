@@ -1,0 +1,48 @@
+:host{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding: 1rem 2rem;
+        gap: 1rem;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: white ;
+        border-radius: 10px;
+
+        & h3{
+            font-size: 1.5rem;
+            font-weight:500;
+            letter-spacing: 1px;
+        }
+    
+        & input{
+            width: 60%;
+            padding: .5rem .8rem;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+
+        & .btn{
+            width: 20%;
+            border: none;
+            color: aliceblue;
+            background-color: var(--senary-color);
+            padding: .6rem 0;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+/*    background-color: #f8f9fa;
+*/
