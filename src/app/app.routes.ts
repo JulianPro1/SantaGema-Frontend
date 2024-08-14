@@ -50,6 +50,14 @@ export const routes: Routes = [
     {
         path: 'usuariosCreate',
         loadComponent: () => import('./Views/gestion-usuarios-create/gestion-usuarios-create.component')
+    },
+    {
+        path: 'accionesCreate',
+        loadComponent: () => import('./Views/acciones-create/acciones-create.component')
+    },
+    {
+        path: 'rolesCreate',
+        loadComponent: () => import('./Views/roles-create/roles-create.component')
     }
 
 ];
