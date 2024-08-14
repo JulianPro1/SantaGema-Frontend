@@ -58,6 +58,10 @@ export const routes: Routes = [
     {
         path: 'rolesCreate',
         loadComponent: () => import('./Views/roles-create/roles-create.component')
+    },
+    {
+        path: 'auditoriaUsuarios',
+        loadComponent: () => import('./Views/auditoria-usuarios/auditoria-usuarios.component')
     }
 
 ];
