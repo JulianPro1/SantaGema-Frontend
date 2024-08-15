@@ -1,1 +1,14 @@
-<p>gestion-usuarios works!</p>
+<div class="body">
+    <div class="container-sections">
+        <app-h1 tittle="Usuarios"></app-h1>
+        <app-search-bar tittle="Usuarios"></app-search-bar>
+
+        <div class="container">
+            <app-h3 tittle="Usuarios" colorFont="white"></app-h3>
+            <div class="container-dataTable">
+                <app-data-table [T_heads]="arrayEncabezados"></app-data-table>
+            </div>
+        </div>    
+    </div>
+    <app-aside-bar></app-aside-bar>
+</div>

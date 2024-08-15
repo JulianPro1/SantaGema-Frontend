@@ -63,5 +63,10 @@ export const routes: Routes = [
         path: 'auditoriaUsuarios',
         loadComponent: () => import('./Views/auditoria-usuarios/auditoria-usuarios.component')
     }
+    ,
+    {
+        path: 'gestionUsuarios',
+        loadComponent: () => import('./Views/gestion-usuarios/gestion-usuarios.component')
+    }
 
 ];

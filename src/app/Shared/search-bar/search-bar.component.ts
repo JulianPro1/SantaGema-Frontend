@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , input} from '@angular/core';
 import { ButtonComponent } from "../button/button.component";
 
 @Component({
@@ -9,5 +9,6 @@ import { ButtonComponent } from "../button/button.component";
   styleUrl: './search-bar.component.css'
 })
 export class SearchBarComponent {
-
+  tittle = input.required<string>()
+  
 }
