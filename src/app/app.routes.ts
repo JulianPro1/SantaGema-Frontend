@@ -68,5 +68,11 @@ export const routes: Routes = [
         path: 'gestionUsuarios',
         loadComponent: () => import('./Views/gestion-usuarios/gestion-usuarios.component')
     }
+    ,
+    {
+        path: 'gestionRoles',
+        loadComponent: () => import('./Views/gestion-roles/gestion-roles.component')
+    }
+
 
 ];
