@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-input-desplegable',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './input-desplegable.component.css'
 })
 export class InputDesplegableComponent {
+  @Input() title: string;
 
+  constructor() {
+    this.title = '';
+  }
 }
