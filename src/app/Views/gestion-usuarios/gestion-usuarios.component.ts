@@ -13,5 +13,6 @@ import { H3Component } from "../../Shared/h3/h3.component";
   styleUrl: './gestion-usuarios.component.css'
 })
 export default class GestionUsuariosComponent {
+
   arrayEncabezados:string[] = ['Nombre', 'Cedula', 'Rol', 'Fecha de Accion']
 }

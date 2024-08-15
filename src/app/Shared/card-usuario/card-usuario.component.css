@@ -1,0 +1,40 @@
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    /* padding-left: 17.5rem; */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+}
+.card-info h1,
+.card-info h2 {
+    margin: 0;
+}
+.estadoGreen {
+    color: var(--tertiary-color);
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.estadoBlue {
+    color: var(--senary-color);
+    margin-top: 1rem;
+    text-align: left;
+}
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
