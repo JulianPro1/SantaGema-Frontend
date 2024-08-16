@@ -5,7 +5,16 @@
         <app-input-text [title]="'titulo del Rol'"></app-input-text>
         <app-textarea [title]="'Descripción del Rol'"></app-textarea>
 
-        <app-checkbox></app-checkbox>
+        <app-button tittle="Añadir Vistas" width="25%" mat-raised-button (click)="openDialog()"></app-button>
+
+        <ul>
+            <li>
+                Selecciones:
+                <ul>
+                    <li *ngFor="let option of selectedOptions">{{ option }}</li>
+                </ul>
+            </li>
+        </ul>
 
         <app-button tittle="Añadir" width="25%"></app-button>
     </div>
