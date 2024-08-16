@@ -22,7 +22,7 @@ import { ModalRolesComponent } from '../modal-roles/modal-roles.component';
     CheckboxComponent
   ],
   templateUrl: './form-roles-create.component.html',
-  styleUrls: ['./form-roles-create.component.css']
+  styleUrl: './form-roles-create.component.css'
 })
 export class FormRolesCreateComponent implements OnInit {
   readonly dialog = inject(MatDialog);

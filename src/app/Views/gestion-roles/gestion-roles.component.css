@@ -63,7 +63,6 @@
                     padding: .5rem .5rem ;
                     background-color: #eeeeee;
                     border-radius: 10px;
-                    color: rgb(0, 0, 0);
                     border: 1px solid rgb(155, 155, 155);
     
                     & summary{ list-style: none; }
@@ -104,6 +103,16 @@
                     
                                 & img {
                                     width: 30px;
+                                    height: 30px;
+                                    border-radius: 50%;
+                                }
+
+                                & img[alt='Editar']{
+                                    background-color: yellow;
+                                }
+
+                                & img[alt='Eliminar']{
+                                    background-color: red;
                                 }
                     
                                 & .tooltip {

@@ -11,7 +11,10 @@
             <li>
                 Selecciones:
                 <ul>
-                    <li *ngFor="let option of selectedOptions">{{ option }}</li>
+                    @for (option of selectedOptions; track $index) {
+                        <li >{{ option }}</li>
+                    }
+                    
                 </ul>
             </li>
         </ul>
