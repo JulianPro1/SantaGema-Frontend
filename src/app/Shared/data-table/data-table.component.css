@@ -80,16 +80,16 @@
             & .tooltip {
                 display: none;
                 position: absolute;
-                left: -2rem;
-                right: -2rem;
-                bottom: 2.5rem;
+                left: -2.5rem;
+                right: -2.5rem;
+                bottom: 2.6rem;
                 z-index: 500;
                 text-align: center;
-                padding: .3rem .2rem;
+                padding: .3rem .1rem;
                 border-radius: 10px;
-                font-size: .6rem;
+                font-size: .7rem;
                 color: white;
-                background-color: black;
+                background-color: #334155;
                 transition: all .5s;
             }
 
@@ -97,8 +97,8 @@
                 content: '';
                 position: absolute;
                 display: block;
-                left: calc(50% - 10px);
-                border-top: 10px solid black;
+                left: calc(50% - 12px);
+                border-top: 10px solid #334155;
                 border-left: 10px solid transparent;
                 border-right: 10px solid transparent;
             }
@@ -109,7 +109,8 @@
         }
 
         & a:hover .tooltip {
-            display: inline-block;
+            display: block;
+            width: 7rem;
             transition: all 1s;
         }
     }
