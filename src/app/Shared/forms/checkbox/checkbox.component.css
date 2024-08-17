@@ -1,6 +1,7 @@
 .checkbox-group {
+    padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Dos columnas */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
     gap: 1rem; /* Espacio entre los checkboxes */
 }
 
