@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { H1Component } from "../../Shared/h1/h1.component";
 import { AsideBarComponent } from "../../Shared/aside-bar/aside-bar.component";
-import { AsideBarUserComponent } from "../../Shared/aside-bar-user/aside-bar-user.component";
 import { H3Component } from "../../Shared/h3/h3.component";
 import { DataTableComponent } from "../../Shared/data-table/data-table.component";
 import { CardGestionContratosComponent } from "../../Shared/card-gestion-contratos/card-gestion-contratos.component";
@@ -9,7 +8,13 @@ import { CardGestionContratosComponent } from "../../Shared/card-gestion-contrat
 @Component({
   selector: 'app-gestion-contratos',
   standalone: true,
-  imports: [H1Component, AsideBarComponent, AsideBarUserComponent, H3Component, DataTableComponent, CardGestionContratosComponent],
+  imports: [
+    H1Component, 
+    AsideBarComponent, 
+    H3Component, 
+    DataTableComponent, 
+    CardGestionContratosComponent
+  ],
   templateUrl: './gestion-contratos.component.html',
   styleUrl: './gestion-contratos.component.css'
 })

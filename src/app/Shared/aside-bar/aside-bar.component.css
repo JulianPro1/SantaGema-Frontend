@@ -20,22 +20,6 @@ aside {
     width: 130%;
 }
 
-.navbar a {
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-    color: var(--gray-color);
-    /* color: var(--quinary-color); */
-}
-
-.navbar a:hover {
-    background-color: var(--primary-color);
-}
-
-.navbar a i {
-    margin-right: 0.5rem;
-}
-
 .fixed-inicio {
     position: absolute;
     bottom: 0;
