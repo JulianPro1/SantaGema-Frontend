@@ -31,7 +31,7 @@
                             </summary>
         
                             <div class="details-acordeon">
-                                @for ( action of rol.actions ; track $index) {
+                                @for ( action of rol.actions ; track action.id) {
                                     <p> {{ action.name }} </p>
                                 }@empty {
                                     <p> no existe</p>

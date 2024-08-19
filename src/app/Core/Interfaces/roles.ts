@@ -10,7 +10,8 @@ export interface arrayRoles{
     create_at?:string,
     status?:string,
     updated_at?:string
-    actions: Permisos[] | number[]
+    actions?: Permisos[],
+    idActions?: number[]
 }
 
  export interface Permisos{
