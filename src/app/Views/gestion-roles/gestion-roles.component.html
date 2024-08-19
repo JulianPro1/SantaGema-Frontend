@@ -7,39 +7,45 @@
 
             <div class="container-info">
                 <div class="container-header">
-                    <button>Agregar nuevo Rol</button>
+                    <button routerLink="">Agregar nuevo Rol</button>
                 </div>
-    
                 <div class="container-acordeon">
-                    <details >
-                        <summary> 
-                            <div class="profile-acordeon">
-                                <div class="text-acordeon">
-                                    <h4>Secretaria</h4>
+                    @for (rol of result.roles; track $index) {
+                        <details >
+                            <summary> 
+                                <div class="profile-acordeon">
+                                    <div class="text-acordeon">
+                                        <h4> {{rol.name}} </h4>
+                                    </div>
+                                    <div class="buttons-acordeon">
+                                        <a href="#">
+                                            <img src="../../assets/Icons/MdiFileDocumentEditOutline.svg" alt="Editar">
+                                            <span class="tooltip">Editar</span>
+                                        </a>
+                                        <a href="#">
+                                            <img src="../../assets/Icons/MdiDeleteOutline.svg" alt="Eliminar">
+                                            <span class="tooltip">Eliminar</span>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="buttons-acordeon">
-                                    <a href="#">
-                                        <img src="../../assets/Icons/EvaEdit2Fill.svg" alt="Editar">
-                                        <span class="tooltip">Editar</span>
-                                    </a>
-                                    <a href="#">
-                                        <img src="../../assets/Icons/EvaTrash2Fill.svg" alt="Eliminar">
-                                        <span class="tooltip">Eliminar</span>
-                                    </a>
-                                </div>
+                            </summary>
+        
+                            <div class="details-acordeon">
+                                @for ( action of rol.actions ; track $index) {
+                                    <p> {{ action.name }} </p>
+                                }@empty {
+                                    <p> no existe</p>
+                                }
+                                
                             </div>
-                        </summary>
-    
-                        <div class="details-acordeon">
-                            <p>Descripcion del los permisos que tiene este rol</p>
-                        </div>
-                    </details>
+                        </details>
+
+                    }
                 </div>
             </div>
-
     </div>
-    
 </div>
+
 
 
 <app-aside-bar></app-aside-bar>

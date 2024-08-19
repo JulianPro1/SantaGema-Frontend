@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { AsideBarComponent } from "../../Shared/aside-bar/aside-bar.component";
 import { H1Component } from "../../Shared/h1/h1.component";
 import { SearchBarComponent } from "../../Shared/search-bar/search-bar.component";
@@ -13,6 +13,7 @@ import { H3Component } from "../../Shared/h3/h3.component";
   styleUrl: './gestion-usuarios.component.css'
 })
 export default class GestionUsuariosComponent {
+  arrayEncabezados:string[] = ['Nombre', 'Cedula', 'Rol', 'Fecha de Accion'];  
 
-  arrayEncabezados:string[] = ['Nombre', 'Cedula', 'Rol', 'Fecha de Accion']
+
 }

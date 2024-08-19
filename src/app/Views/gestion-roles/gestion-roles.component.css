@@ -107,14 +107,6 @@
                                     border-radius: 50%;
                                 }
 
-                                & img[alt='Editar']{
-                                    background-color: yellow;
-                                }
-
-                                & img[alt='Eliminar']{
-                                    background-color: red;
-                                }
-                    
                                 & .tooltip {
                                     display: none;
                                     position: absolute;
