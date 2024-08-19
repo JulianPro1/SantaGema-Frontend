@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router'
+import { AsideBtnComponent } from "../aside-btn/aside-btn.component";
 
 @Component({
   selector: 'app-aside-bar',
   standalone: true,
-  imports: [RouterLink],
   templateUrl: './aside-bar.component.html',
-  styleUrl: './aside-bar.component.css'
+  imports: [AsideBtnComponent], 
+  styleUrls: ['./aside-bar.component.css']
 })
 export class AsideBarComponent {
-
+  // ...
 }
