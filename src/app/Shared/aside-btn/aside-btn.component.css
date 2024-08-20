@@ -1,10 +1,13 @@
 :host {
   width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
   color: var(--gray-color);
 
-  &:hover {
+  & a{
+    text-align: center;
+    display: block;
+  }
+
+  & a:hover {
     background-color: var(--primary-color);
   }
 
@@ -14,10 +17,7 @@
 }
 
 .fixed-inicio {
+  display: block;
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
   text-align: center;
 }
