@@ -4,7 +4,8 @@
     width: 100%;
 
     & h3{
-        font-size: 1.5rem;
+        padding-left: .5rem;
+        font-size: 1.2rem;
         font-weight: 500;
         letter-spacing: 2px;
     }

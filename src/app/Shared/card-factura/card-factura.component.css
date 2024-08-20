@@ -5,8 +5,9 @@
     width: 100%;
     margin: .5rem 0 0 0;
     border-radius: 20px;
-    box-shadow: 0 0 4px black inset ,4px 4px 4px black;
-    background-color: aliceblue;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(155, 155, 155);
+    background-color: white;
 
     & .card-header{
         display: flex;
@@ -15,7 +16,7 @@
         gap: 1.5rem;
         padding: .5rem 1rem 1.5rem 1rem;
         width: 100%;
-        border-bottom: 3px solid black;
+        border-bottom: 2px solid rgb(155, 155, 155); ;
 
         & .header-img{
             width: 10%;
