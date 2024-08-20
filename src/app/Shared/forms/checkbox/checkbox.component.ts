@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter, OnInit, inject  } from '@angular/core';
 import { ActionsService } from "../../../Core/services/actions.service";
-import { PermisosA  } from "../../../Core/Interfaces/permisos-a";
+import { PermisosA  } from "../../../Core/Interfaces/interfacesResponse/permisos-a";
 
 export interface CheckboxOption {
   id: string;

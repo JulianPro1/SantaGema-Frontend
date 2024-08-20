@@ -8,7 +8,7 @@ import {  RouterLink } from "@angular/router";
 import {  JsonPipe } from "@angular/common";
 import { RolesService } from "../../Core/services/roles.service";
 //*********
-import { Roles, arrayRoles} from "../../Core/Interfaces/roles";
+import { Roles} from "../../Core/Interfaces/interfacesResponse/roles";
 
 @Component({
   selector: 'app-gestion-roles',

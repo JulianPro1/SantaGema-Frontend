@@ -10,36 +10,40 @@
                     <button routerLink="">Agregar nuevo Rol</button>
                 </div>
                 <div class="container-acordeon">
-                    @for (rol of result?.roles; track $index) {
-                        <details >
-                            <summary> 
-                                <div class="profile-acordeon">
-                                    <div class="text-acordeon">
-                                        <h4> {{rol.name}} </h4>
+                    @for (rol of result?.roles; track rol.id) {
+                        @if (rol.status === 'active') {
+                            <details >
+                                <summary> 
+                                    <div class="profile-acordeon">
+                                        <div class="text-acordeon">
+                                            <h4> {{rol.name}} </h4>
+                                        </div>
+                                        <div class="buttons-acordeon">
+                                            <a href="#">
+                                                <img src="../../assets/Icons/MdiFileDocumentEditOutline.svg" alt="Editar">
+                                                <span class="tooltip">Editar</span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../../assets/Icons/MdiDeleteOutline.svg" alt="Eliminar">
+                                                <span class="tooltip">Eliminar</span>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="buttons-acordeon">
-                                        <a href="#">
-                                            <img src="../../assets/Icons/MdiFileDocumentEditOutline.svg" alt="Editar">
-                                            <span class="tooltip">Editar</span>
-                                        </a>
-                                        <a href="#">
-                                            <img src="../../assets/Icons/MdiDeleteOutline.svg" alt="Eliminar">
-                                            <span class="tooltip">Eliminar</span>
-                                        </a>
-                                    </div>
+                                </summary>
+            
+                                <div class="details-acordeon">
+                                    @for ( action of rol.actions ; track action.id) {
+                                        <p> {{ action.name }} </p>
+                                    }@empty {
+                                        <p> no existe</p>
+                                    }
+                                    
                                 </div>
-                            </summary>
-        
-                            <div class="details-acordeon">
-                                @for ( action of rol.actions ; track action.id) {
-                                    <p> {{ action.name }} </p>
-                                }@empty {
-                                    <p> no existe</p>
-                                }
-                                
-                            </div>
-                        </details>
+                            </details>
 
+
+
+                        }
                     }
                 </div>
             </div>

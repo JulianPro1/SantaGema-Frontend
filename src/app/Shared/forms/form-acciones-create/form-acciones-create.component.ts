@@ -7,7 +7,7 @@ import { InputTextComponent } from "../input-text/input-text.component";
 import { TextareaComponent } from "../textarea/textarea.component";
 import { ButtonComponent } from "../../button/button.component";
 import { ActionsService } from '../../../Core/services/actions.service';
-import { PermisosA } from '../../../Core/Interfaces/permisos-a';
+import { PermisosA } from '../../../Core/Interfaces/interfacesResponse/permisos-a';
 
 
 @Component({

@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
-import { arrayRoles } from "../Interfaces/roles";
-import {  Roles } from "../Interfaces/roles";
+import {  Roles } from "../Interfaces/interfacesResponse/roles";
+import { RolesSend  } from "../Interfaces/interfacesSend/roles-send";
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,15 +22,27 @@ export class RolesService {
     return this._http.get<Roles>(`${this.endpointURL}/${id}`)
   }
 
-  CreateRol(item:arrayRoles){
+  CreateRol( item:RolesSend){
     const body = {
       name: item.name,
       description: item.description,
-      actions: item.idActions
+      actions: item.actions
     }
-    this._http.post<arrayRoles>(this.endpointURL,body);
+
+    return this._http.post<RolesSend>(this.endpointURL,body);
   }
 
+  UpdateRol(id:number,item:RolesSend){
+    const body = {
+      name: item.name,
+      description: item.description,
+      actions: item.actions
+    }
 
+    return this._http.put<RolesSend>(`${this.endpointURL}/${id}`,body)
+  }
 
+  DeleteRol(id:number){
+    return this._http.delete(`${this.endpointURL}/${id}`);
+  }
 }

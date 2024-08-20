@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { PermisosA } from '../Interfaces/permisos-a';
+import { PermisosA } from '../Interfaces/interfacesResponse/permisos-a';
 
 @Injectable({
   providedIn: 'root'
