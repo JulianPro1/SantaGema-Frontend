@@ -26,7 +26,7 @@ export class RolesService {
     const body = {
       name: item.name,
       description: item.description,
-      actions: item.actions
+      actions: item.idActions
     }
     this._http.post<arrayRoles>(this.endpointURL,body);
   }

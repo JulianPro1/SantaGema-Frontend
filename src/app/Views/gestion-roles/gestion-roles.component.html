@@ -10,7 +10,7 @@
                     <button routerLink="">Agregar nuevo Rol</button>
                 </div>
                 <div class="container-acordeon">
-                    @for (rol of result.roles; track $index) {
+                    @for (rol of result?.roles; track $index) {
                         <details >
                             <summary> 
                                 <div class="profile-acordeon">

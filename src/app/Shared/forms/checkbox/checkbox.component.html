@@ -1,22 +1,7 @@
 <div class="checkbox-group">
-    <input type="checkbox" id="opcion1" name="opciones-pago" value="Auditoria" (change)="updateSelectedOptions($event)">
-    <label for="opcion1">Auditoria</label>
 
-    <input type="checkbox" id="opcion2" name="opciones-pago" value="opcion2" (change)="updateSelectedOptions($event)">
-    <label for="opcion2">Opción 2</label>
-
-    <input type="checkbox" id="opcion3" name="opciones-pago" value="opcion3"(change)="updateSelectedOptions($event)">
-    <label for="opcion3">Opción 3</label>
-
-    <input type="checkbox" id="opcion4" name="opciones-pago" value="opcion4"(change)="updateSelectedOptions($event)">
-    <label for="opcion4">Opción 4</label>
-
-    <input type="checkbox" id="opcion4" name="opciones-pago" value="opcion5"(change)="updateSelectedOptions($event)">
-    <label for="opcion4">Opción 5</label>
-
-    <input type="checkbox" id="opcion4" name="opciones-pago" value="opcion6"(change)="updateSelectedOptions($event)">
-    <label for="opcion4">Opción 6</label>
-
-    <input type="checkbox" id="opcion4" name="opciones-pago" value="opcion7"(change)="updateSelectedOptions($event)">
-    <label for="opcion4">Opción 7</label>
+    @for (action of results?.actions; track action.id) {
+        <input type="checkbox" [id]="action.id" name="opciones-pago" [value]=" action.id" (change)="updateSelectedOptions($event)">
+        <label [htmlFor]=" action.name"> {{ action.name }} </label>
+    }
 </div>

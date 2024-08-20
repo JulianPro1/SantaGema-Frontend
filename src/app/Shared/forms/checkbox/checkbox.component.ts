@@ -1,4 +1,6 @@
-import { Component, Output, EventEmitter  } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit, inject  } from '@angular/core';
+import { ActionsService } from "../../../Core/services/actions.service";
+import { PermisosA  } from "../../../Core/Interfaces/permisos-a";
 
 export interface CheckboxOption {
   id: string;
@@ -14,20 +16,22 @@ export interface CheckboxOption {
   templateUrl: './checkbox.component.html',
   styleUrl: './checkbox.component.css'
 })
-export class CheckboxComponent {
-  options: CheckboxOption[] = [
-    { id: 'opcion1', label: 'Opción 1', value: 'opcion1', checked: false },
-    { id: 'opcion2', label: 'Opción 2', value: 'opcion2', checked: false },
-    { id: 'opcion3', label: 'Opción 3', value: 'opcion3', checked: false },
-    { id: 'opcion4', label: 'Opción 4', value: 'opcion4', checked: false },
-    { id: 'opcion5', label: 'Opción 5', value: 'opcion5', checked: false },
-    { id: 'opcion6', label: 'Opción 6', value: 'opcion6', checked: false },
-    { id: 'opcion7', label: 'Opción 7', value: 'opcion7', checked: false },
-  ];
-
+export class CheckboxComponent implements OnInit {
+  actionService = inject(ActionsService);
+  results !: PermisosA
   @Output() selectedOptionsChange = new EventEmitter<any>();
 
   selectedOptions: any = [];
+
+
+  ngOnInit(): void {
+    this.actionService.getPermisosAll().subscribe( response => {
+
+      this.results = response
+      console.log('Luego de recuperar la data');
+      console.log(this.results);
+    })
+  }
 
   updateSelectedOptions(event: any) {
     const value = event.target.value;
