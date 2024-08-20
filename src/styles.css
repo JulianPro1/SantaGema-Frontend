@@ -1,6 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,400&family=Rubik:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@font-face {
+    font-family: "Montserrat-Italic" ;
+    src: url('../public/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+}
 
+@font-face {
+    font-family: "Poppins-medium" ;
+    src: url('../public/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    font-display: swap;
+}
 
 :root {
     --primary-color: #0C3D14;
@@ -12,6 +20,8 @@
     --black-color: #0c0404;
     --gray-color: #F5F5F5;
     --cream-color: #f5f5dc;
+    --font-h3: "Montserrat-Italic";
+    --font-component: "Poppins-medium";
 }
 
 html {

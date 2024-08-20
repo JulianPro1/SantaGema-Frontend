@@ -16,6 +16,7 @@
 
         
         & .container-dataTable{
+            font-family: var(--font-component);
             display: flex;
             flex-direction: column;
             width: 100%;
