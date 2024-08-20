@@ -20,10 +20,3 @@ aside {
     justify-content: start;
     width: 130%;
 }
-
-.fixed-inicio {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-}
