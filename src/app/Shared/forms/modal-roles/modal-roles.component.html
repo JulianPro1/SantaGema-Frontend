@@ -2,9 +2,7 @@
 <mat-dialog-content>
     <p>Añadir Vistas a las que se tendra acceso</p>
     <app-checkbox (selectedOptionsChange)="onSelectedOptionsChange($event)"></app-checkbox>
-    <ul>
-        <li *ngFor="let option of selectedOptions">{{ option }}</li>
-    </ul>
+    
 </mat-dialog-content>
 <mat-dialog-actions>
     <ul>
