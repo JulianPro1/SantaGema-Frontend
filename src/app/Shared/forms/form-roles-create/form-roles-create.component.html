@@ -2,23 +2,28 @@
     <app-h1 tittle="Módulo de Roles y permisos"></app-h1>
     <div class="container">
         <app-h2 tittle="Crear Roles"></app-h2>
-        <app-input-text [title]="'titulo del Rol'"></app-input-text>
-        <app-textarea [title]="'Descripción del Rol'"></app-textarea>
 
-        <app-button tittle="Añadir Vistas" width="25%" mat-raised-button (click)="openDialog()"></app-button>
+        <form action="" [formGroup]="userForm">
+            <label for="NameRol">Nombre del Rol</label>
+            <input type="text" placeholder="Nombre del Rol" formControlName="NameRol">
+            
+            <label for="DescriptionRol"> Descripción del Rol</label>
+            <textarea name="DescriptionRol" id="" placeholder="¿Qué hace este Rol?" formControlName="DescriptionRol" ></textarea>
+            
+            <app-button tittle="Añadir Vistas" width="25%" mat-raised-button (click)="openDialog()"></app-button>
+            
+            
+            <p>Selecciones:</p>
+            <ul>
+                @for (option of selectedOptions; track $index) {
+                <li>{{ option }}</li>
+                }            
+            </ul>
+            <button type="submit" class="btn">Añadir</button>
+            <!-- <app-button tittle="Añadir" width="25%"></app-button> -->
+            
+        </form>
 
-        <ul>
-            <li>
-                Selecciones:
-                <ul>
-                    @for (option of selectedOptions; track $index) {
-                        <li >{{ option }}</li>
-                    }
-                    
-                </ul>
-            </li>
-        </ul>
 
-        <app-button tittle="Añadir" width="25%"></app-button>
     </div>
 </div>

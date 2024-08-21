@@ -8,6 +8,24 @@
     border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+
+    & input {
+        background-color: #eeeeee;
+        border-radius: 10px;
+        width: 50%;
+        padding: .5rem;
+        margin: 0 auto;
+    }
+
+    & textarea {
+        background-color: #eeeeee;
+        min-height: 100px;
+        resize: none;
+        border-radius: 10px;
+        width: 50%;
+        padding: .5rem;
+        margin: 0 auto;
+    }
     
 
     & * {
