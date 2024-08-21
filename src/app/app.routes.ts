@@ -72,6 +72,10 @@ export const routes: Routes = [
     {
         path: 'gestionRoles',
         loadComponent: () => import('./Views/gestion-roles/gestion-roles.component')
+    },
+    {
+        path: 'AuditoriaUsuariosComponent',
+        loadComponent: () => import('./Views/auditoria-usuarios/auditoria-usuarios.component')
     }
 
 

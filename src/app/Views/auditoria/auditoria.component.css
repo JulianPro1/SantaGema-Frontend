@@ -107,3 +107,7 @@
         }
     }
 }
+span{
+    text-decoration: underline;
+    cursor: pointer;
+}
