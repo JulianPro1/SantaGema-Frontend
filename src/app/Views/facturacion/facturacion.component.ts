@@ -12,5 +12,11 @@ import { CardFacturaComponent } from "../../Shared/card-factura/card-factura.com
   styleUrl: './facturacion.component.css'
 })
 export default class FacturacionComponent {
+  encontrar:boolean = false
+  result:string = ''
 
+  ResultBusqueda(valor:boolean, busqueda:boolean){
+    this.encontrar = busqueda
+  }
+  
 }

@@ -2,10 +2,11 @@
 
     <div class="container-sections">
         <app-h1 tittle="Facturacion"></app-h1>
-        <app-search-bar tittle="Facturacion"></app-search-bar>
+        <app-search-bar tittle="Facturacion" (Busqueda)="ResultBusqueda(encontrar,$event)"></app-search-bar>
 
-        <app-card-factura></app-card-factura>
-
+        @if ( encontrar) {
+            <app-card-factura></app-card-factura>
+        }   
     </div>
 
     <app-aside-bar></app-aside-bar>

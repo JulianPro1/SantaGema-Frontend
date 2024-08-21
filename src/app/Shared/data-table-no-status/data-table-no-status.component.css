@@ -1,0 +1,120 @@
+:host{
+    width: 100%;
+
+& table {
+    width: 100%;
+    text-align: center;
+    font-size: .9rem;
+    padding: 0 0;
+    border-collapse: collapse;
+
+    & tr {
+        padding: .5rem 0;
+    }
+
+    & th {
+        text-align: center;
+        white-space: nowrap;
+        padding: .5rem 1.5rem;
+        margin: 0 1rem;
+        font-size: .9rem;
+        border-bottom: 2px solid #e2e8f0;
+    }
+
+    & td {
+        text-align: center;
+        white-space: nowrap;
+        padding: .5rem 1rem;
+        border: 2px solid #e2e8f0;
+    }
+
+    & img[alt="Añadir-Afiliado"] {
+        width: 30px;
+        height: 30px;
+        color: #3fff00;
+        cursor: pointer;
+    }
+
+    & .status {
+        display: inline-flex;
+        justify-content: center;
+        padding: .2rem 1rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        border-radius: 10px;
+    }
+    & .status.background-status-verde{
+        color:#124825 ;
+        background-color: #7cd29a;
+    }
+    & .status.background-status-azul{
+        color:#124825 ;
+        background-color: #69c2f0;
+    }
+    & .status.background-status-naranja{
+        color:#965428;
+        background-color: #fcb585;
+    }
+    & .status.background-status-rojo{
+        color:#793d45 ;
+        background-color: #e69aa7;
+    }
+
+    & .icon-datatable {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        width: 80%;
+        padding: 0 .5rem;
+        gap: 1.5rem;
+
+        & a {
+            text-decoration: none;
+            position: relative;
+            cursor: pointer;
+
+            & img {
+                width: 30px;
+            }
+
+            & .tooltip {
+                display: none;
+                position: absolute;
+                left: -2.5rem;
+                right: -2.5rem;
+                bottom: 2.6rem;
+                z-index: 500;
+                text-align: center;
+                padding: .3rem .1rem;
+                border-radius: 10px;
+                font-size: .7rem;
+                color: white;
+                background-color: #334155;
+                transition: all .5s;
+            }
+
+            & .tooltip::after {
+                content: '';
+                position: absolute;
+                display: block;
+                left: calc(50% - 12px);
+                border-top: 10px solid #334155;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+        }
+
+        & img:hover{
+            transform: scale(1.10);
+        }
+
+        & a:hover .tooltip {
+            display: block;
+            width: 7rem;
+            transition: all 1s;
+        }
+    }
+
+}
+
+}

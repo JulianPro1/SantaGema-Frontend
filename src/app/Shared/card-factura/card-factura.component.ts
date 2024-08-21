@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-card-factura',
@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './card-factura.component.css'
 })
 export class CardFacturaComponent {
-
 }
