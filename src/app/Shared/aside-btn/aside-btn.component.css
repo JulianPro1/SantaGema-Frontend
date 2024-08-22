@@ -6,18 +6,7 @@
     text-align: center;
     display: block;
   }
-
-  & a:hover {
-    background-color: var(--primary-color);
-  }
-
   & i {
     margin-right: 0.5rem;
   }
-}
-
-.fixed-inicio {
-  display: block;
-  position: absolute;
-  text-align: center;
 }

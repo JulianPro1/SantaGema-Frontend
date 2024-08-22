@@ -13,6 +13,22 @@
 :root {
     --primary-color: #0C3D14;
     --secondary-color: #126320;
+    /* 
+    ?colores extraidos del ig de santa gema
+    --secondary-color: #014aac; azul rey
+    --secondary-color: #01c3cb; celeste
+    --secondary-color: #25a946; verde pino
+    --secondary-color: #25a946; Mano del pino
+    --secondary-color: #0d760b; verde
+
+    *otros colores que extraje de coolors
+    --secondary-color: #255c99; lapiz lazuli osc
+    --secondary-color: #7EA3CC; vista blue cambiar color de fuente
+    --secondary-color: ##2B3A67; delft blue osc
+    --secondary-color: #79BEEE; maya blue cambiar color
+    */
+
+    
     --tertiary-color: #199147;
     --quaternary-color: #C3D230;
     --quinary-color: #FDF339;
@@ -61,11 +77,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 body {
     background-color: var(--gray-color);
-    /* background-color: var(--cream-color); */
-    /* padding-left: 17.5rem; */
-    /* con este padding-left si esta todo centrau  
-    ojito con esto que esta tumbando el login
-    */
 }
 
 html {
@@ -99,23 +110,7 @@ h3 {
 }
 
 
-aside {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: var(--secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    flex-flow: column;
-    padding: 10rem 2rem;
-    width: 17.5rem;
-    text-align: center;
-}
-
-.navbar {
+/* .navbar {
     display: flex;
     flex-direction: column;
     width: 130%;
@@ -126,23 +121,7 @@ aside {
     padding: 1rem;
     box-sizing: border-box;
     color: var(--gray-color);
-    /* color: var(--quinary-color); */
-}
-
-.navbar a:hover {
-    background-color: var(--primary-color);
-}
-
-.navbar a i {
-    margin-right: 0.5rem;
-}
-
-.fixed-inicio {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
+} */
 
 .center-text {
     display: flex;
@@ -164,6 +143,8 @@ aside {
 
 .btn:hover {
     background-color: #00357a;
+    transform: scale(1.05);
+
 }
 
 /* para eliminar las flechas de los input */
@@ -173,24 +154,6 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-/* .dashboard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
-    gap: 5rem;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 14px;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-
-}
-.card:hover{
-    filter: none;
-    background-color: var(--gray-color);
-} */
 html,
 body {
     height: 100%;
