@@ -47,12 +47,16 @@ export class FormRolesCreateComponent implements OnInit {
 
   //? form 
 
-
-
   userForm: FormGroup = new FormGroup({
     NameRol: new FormControl(''),
     DescriptionRol: new FormControl('')
   });
+
+  onSaveRol(){
+    debugger;
+    const obj = this.userForm.value;
+    
+  }
 
 
 
