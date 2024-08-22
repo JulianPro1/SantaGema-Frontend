@@ -31,7 +31,7 @@ export const routes: Routes = [
     }
     ,
     {
-        path: 'gestionGrupoFamiliar',
+        path: 'gestionGrupoFamiliarCreate',
         loadComponent: () => import ('./Views/gestion-grupo-familiar/gestion-grupo-familiar.component')
     }
     ,
@@ -48,7 +48,7 @@ export const routes: Routes = [
         loadComponent: () => import('./Views/gestion-usuarios/gestion-usuarios.component')
     },
     {
-        path: 'usuariosCreate',
+        path: 'gestionUsuariosCreate',
         loadComponent: () => import('./Views/gestion-usuarios-create/gestion-usuarios-create.component')
     },
     {
