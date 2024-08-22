@@ -19,12 +19,3 @@ aside {
     flex-direction: column;
     width: 130%;
 }
-
-.fixed-inicio {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-    text-align: center;
-}

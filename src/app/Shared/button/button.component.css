@@ -3,7 +3,7 @@
     justify-content: center;
     width: 100%;
 
-    & button{
+    & .btn {
         border: none;
         color: aliceblue;
         background-color: var(--senary-color);
@@ -11,7 +11,7 @@
         border-radius: 20px;
         cursor: pointer;
     }
-    & button:hover{
+    & .btn :hover{
         background-color: #00357a;
         transform: scale(1.05);
     }
