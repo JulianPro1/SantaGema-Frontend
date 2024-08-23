@@ -19,11 +19,12 @@
                                             <h4> {{rol.name}} </h4>
                                         </div>
                                         <div class="buttons-acordeon">
-                                            <a href="#">
+                                            <button (click)="CreateRol()"> enviar prueba</button>
+                                            <a (click)="UpdateRol(rol.id)">
                                                 <img src="../../assets/Icons/MdiFileDocumentEditOutline.svg" alt="Editar">
                                                 <span class="tooltip">Editar</span>
                                             </a>
-                                            <a href="#">
+                                            <a (click)="DeleteRoles(rol.id)">
                                                 <img src="../../assets/Icons/MdiDeleteOutline.svg" alt="Eliminar">
                                                 <span class="tooltip">Eliminar</span>
                                             </a>

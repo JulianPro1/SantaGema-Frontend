@@ -4,7 +4,7 @@ export interface Roles {
 }
 
 export interface arrayRoles{
-    id?: number,
+    id: number,
     name:string,
     description:string
     create_at?:string,
