@@ -9,7 +9,6 @@ import {  JsonPipe } from "@angular/common";
 import { RolesService } from "../../Core/services/roles.service";
 //*********
 import { Roles} from "../../Core/Interfaces/interfacesResponse/roles";
-import { RolesSend } from "../../Core/Interfaces/interfacesSend/roles-send";
 
 @Component({
   selector: 'app-gestion-roles',
@@ -21,9 +20,7 @@ import { RolesSend } from "../../Core/Interfaces/interfacesSend/roles-send";
 export default class GestionRolesComponent {
 
   rolesService = inject(RolesService);
-  router = inject(Router)
   result!:Roles
-  enviarData:RolesSend = {name:'Profesora',description:'fua chaval', actions:[1]}
  
 
   ngOnInit(){
@@ -37,19 +34,12 @@ export default class GestionRolesComponent {
     })
   }
 
-  CreateRol(){
-    this.rolesService.CreateRol(this.enviarData).subscribe(resp =>{
-      console.log(resp)
-      this.GetRoles()
-    })
-  }
-
-  UpdateRol(id:number){
+  /*UpdateRol(id:number){
     this.rolesService.UpdateRol(id,this.enviarData).subscribe( resp =>{
       console.log(resp);
       this.GetRoles();
     })
-  }
+  }*/
 
   DeleteRoles(id:number){
     this.rolesService.DeleteRol(id).subscribe( resp =>{

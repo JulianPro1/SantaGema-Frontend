@@ -36,7 +36,7 @@ export class CheckboxComponent implements OnInit {
   updateSelectedOptions(event: any) {
     const value = event.target.value;
     if (event.target.checked) {
-      this.selectedOptions.push(value);
+      this.selectedOptions.push( value);
     } else {
       this.selectedOptions = this.selectedOptions.filter((option: any) => option !== value);
     }

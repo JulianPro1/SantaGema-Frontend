@@ -1,14 +1,15 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { H1Component } from "../../h1/h1.component";
 import { H2Component } from "../../h2/h2.component";
-import { InputTextComponent } from "../input-text/input-text.component";
-import { TextareaComponent } from "../textarea/textarea.component";
 import { InputDesplegableComponent } from "../input-desplegable/input-desplegable.component";
 import { ButtonComponent } from "../../button/button.component";
 import { CheckboxComponent } from "../checkbox/checkbox.component";
 import { MatDialog } from '@angular/material/dialog';
 import { ModalRolesComponent } from '../modal-roles/modal-roles.component';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RolesSend } from '../../../Core/Interfaces/interfacesSend/roles-send';
+import {  RolesService } from "../../../Core/services/roles.service";
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -17,8 +18,6 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
   imports: [
     H1Component,
     H2Component,
-    InputTextComponent,
-    TextareaComponent,
     InputDesplegableComponent,
     ButtonComponent,
     CheckboxComponent,
@@ -30,7 +29,10 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
 })
 export class FormRolesCreateComponent implements OnInit {
   readonly dialog = inject(MatDialog);
+  private RolesService =  inject(RolesService);
+  private Navigation = inject(Router);
   selectedOptions = [];
+  FormResult:RolesSend = { name: '', description: '', actions: []};
 
   constructor() { }
 
@@ -53,9 +55,18 @@ export class FormRolesCreateComponent implements OnInit {
   });
 
   onSaveRol(){
-    debugger;
-    const obj = this.userForm.value;
-    
+    const arrayActions = this.selectedOptions.map(Number);
+    this.FormResult.name = this.userForm.get('NameRol')?.value
+    this.FormResult.description = this.userForm.get('DescriptionRol')?.value
+    this.FormResult.actions = [...arrayActions];
+
+    console.log(this.FormResult);
+ 
+    this.RolesService.CreateRol(this.FormResult).subscribe( resp =>{
+      console.log(resp)
+      this.Navigation.navigateByUrl('/gestionRoles');
+
+    })
   }
 
 
