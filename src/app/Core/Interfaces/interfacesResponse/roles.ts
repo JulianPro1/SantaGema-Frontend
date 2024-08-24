@@ -1,6 +1,7 @@
 export interface Roles {
   message:string,
-  roles: arrayRoles[]
+  roles: arrayRoles[],
+  role?: arrayRoles
 }
 
 export interface arrayRoles{

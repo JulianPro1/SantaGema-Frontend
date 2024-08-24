@@ -8,7 +8,7 @@
             <input type="text" placeholder="Nombre del Rol" formControlName="NameRol">
             
             <label for="DescriptionRol"> Descripción del Rol</label>
-            <textarea name="DescriptionRol" id="" placeholder="¿Qué hace este Rol?" formControlName="DescriptionRol" ></textarea>
+            <textarea name="DescriptionRol" placeholder="¿Qué hace este Rol?" formControlName="DescriptionRol" ></textarea>
             
             <app-button tittle="Añadir Permisos" width="25%" mat-raised-button (click)="openDialog()"></app-button>
             
@@ -19,7 +19,7 @@
                 <li>{{ option }}</li>
                 }            
             </ul>
-            <button type="submit" class="btn" (click)="onSaveRol()" >Añadir</button>
+            <button class="btn" (click)="edit ? updateRol() : onSaveRol()">Añadir</button>
             <!-- <app-button tittle="Añadir" width="25%"></app-button> -->
         </form>
     </div>

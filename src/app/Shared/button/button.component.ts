@@ -20,12 +20,7 @@ constructor( ){
 }
 
 ngOnInit(){
-  console.log(this.width());
 }
-
-ngAfterViewInit(){
-
-  }
 
 
 }

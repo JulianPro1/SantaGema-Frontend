@@ -7,7 +7,7 @@
 
             <div class="container-info">
                 <div class="container-header">
-                    <button routerLink="/formRolesCreate">Agregar nuevo Rol</button>
+                    <button routerLink="/formRolesCreate/new">Agregar nuevo Rol</button>
                 </div>
                 <div class="container-acordeon">
                     @for (rol of result?.roles; track rol.id) {
@@ -19,7 +19,7 @@
                                             <h4> {{rol.name}} </h4>
                                         </div>
                                         <div class="buttons-acordeon">
-                                            <a>
+                                            <a routerLink="/formRolesCreate/{{rol.id}}">
                                                 <img src="../../assets/Icons/MdiFileDocumentEditOutline.svg" alt="Editar">
                                                 <span class="tooltip">Editar</span>
                                             </a>

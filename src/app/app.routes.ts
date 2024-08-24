@@ -56,7 +56,7 @@ export const routes: Routes = [
         loadComponent: () => import('./Views/acciones-create/acciones-create.component')
     },
     {
-        path: 'formRolesCreate',
+        path: 'formRolesCreate/:id',
         loadComponent: () => import('./Views/roles-create/roles-create.component')
     },
     {
