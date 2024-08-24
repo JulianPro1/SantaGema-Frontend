@@ -5,10 +5,10 @@
 
         <form action="" [formGroup]="userForm">
             <label for="NameRol">Nombre del Rol</label>
-            <input type="text" placeholder="Nombre del Rol" formControlName="NameRol">
+            <input type="text" placeholder="Nombre del Rol" formControlName="name">
             
             <label for="DescriptionRol"> Descripción del Rol</label>
-            <textarea name="DescriptionRol" placeholder="¿Qué hace este Rol?" formControlName="DescriptionRol" ></textarea>
+            <textarea name="DescriptionRol" placeholder="¿Qué hace este Rol?" formControlName="description" ></textarea>
             
             <app-button tittle="Añadir Permisos" width="25%" mat-raised-button (click)="openDialog()"></app-button>
             

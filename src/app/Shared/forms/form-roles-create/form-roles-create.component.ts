@@ -7,7 +7,6 @@ import { CheckboxComponent } from "../checkbox/checkbox.component";
 import { MatDialog } from '@angular/material/dialog';
 import { ModalRolesComponent } from '../modal-roles/modal-roles.component';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RolesSend } from '../../../Core/Interfaces/interfacesSend/roles-send';
 import {  RolesService } from "../../../Core/services/roles.service";
 import { Router , ActivatedRoute} from "@angular/router";
 
@@ -34,7 +33,6 @@ export class FormRolesCreateComponent implements OnInit {
   private rutaDecision = inject(ActivatedRoute)
   edit:boolean = false;
   selectedOptions = [];
-  FormResult:RolesSend = { name: '', description: '', actions: []};
 
   constructor() { }
 
@@ -57,8 +55,8 @@ export class FormRolesCreateComponent implements OnInit {
   }
 
   userForm: FormGroup = new FormGroup({
-    NameRol: new FormControl(''),
-    DescriptionRol: new FormControl(''),
+    name: new FormControl(''),
+    description: new FormControl(''),
     actions: new FormControl([])
   });
 
@@ -66,8 +64,8 @@ export class FormRolesCreateComponent implements OnInit {
     const objEdit = {Name:'', description: ''}
     this.RolesService.getRolesId(id).subscribe({ 
       next: (resp) =>{
-        this.userForm.get('NameRol')?.setValue(resp.role?.name);
-        this.userForm.get('DescriptionRol')?.setValue(resp.role?.description);
+        this.userForm.get('name')?.setValue(resp.role?.name);
+        this.userForm.get('description')?.setValue(resp.role?.description);
       },
       error: (resp )=> {
         console.log(resp)
@@ -77,27 +75,24 @@ export class FormRolesCreateComponent implements OnInit {
 
   onSaveRol(){
     const arrayActions = this.selectedOptions.map(Number);
-    this.FormResult.name = this.userForm.get('NameRol')?.value
-    this.FormResult.description = this.userForm.get('DescriptionRol')?.value
-    this.FormResult.actions = [...arrayActions];
-  
+    this.userForm.get('actions')?.setValue(arrayActions);
+
     console.log(this.userForm.value);
  
-    this.RolesService.CreateRol(this.FormResult).subscribe( resp =>{
-      console.log(resp)
-      this.Navigation.navigateByUrl('/gestionRoles');
-
+    this.RolesService.CreateRol(this.userForm.value).subscribe({
+      next: (resp) =>{
+        console.log(resp)
+        this.Navigation.navigateByUrl('/gestionRoles');
+      }
     })
   }
 
   updateRol( ){
     let idRol = this.rutaDecision.snapshot.paramMap.get('id');
     const arrayActions = this.selectedOptions.map(Number);
-    this.FormResult.name = this.userForm.get('NameRol')?.value;
-    this.FormResult.description = this.userForm.get('DescriptionRol')?.value;
-    this.FormResult.actions = [...arrayActions];
+    this.userForm.get('actions')?.setValue(arrayActions);
 
-    this.RolesService.UpdateRol(+idRol!,this.FormResult).subscribe({
+    this.RolesService.UpdateRol(+idRol!,this.userForm.value).subscribe({
       next: (resp) => {
         console.log(resp);
         this.Navigation.navigateByUrl('/gestionRoles');
