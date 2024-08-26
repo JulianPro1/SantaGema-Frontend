@@ -21,5 +21,5 @@ import { ButtonComponent } from '../../Shared/button/button.component'
   styleUrl: './gestion-contratos.component.css'
 })
 export default class GestionContratosComponent {
-  encabezados: string[] = ['nombre', 'edad', 'fecha Registro']
+  
 }
