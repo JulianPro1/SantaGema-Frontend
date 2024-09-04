@@ -1,0 +1,11 @@
+:host{
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+}

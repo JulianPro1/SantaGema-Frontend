@@ -1,0 +1,10 @@
+
+
+<div class="container-sections">
+        <app-h1 tittle="Facturacion"></app-h1>
+        <app-search-bar tittle="Facturacion" (Busqueda)="ResultBusqueda(encontrar,$event)"></app-search-bar>
+
+        @if ( encontrar) {
+            <app-card-factura></app-card-factura>
+        }   
+</div>

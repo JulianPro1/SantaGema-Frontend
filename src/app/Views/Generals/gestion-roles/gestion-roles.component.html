@@ -1,0 +1,51 @@
+
+    <div class="container-sections">
+        <app-h1 tittle="Gestion de roles y Permisos"></app-h1>
+        <div class="container">
+            <app-h3 tittle="Roles disponibles" colorFont="white"></app-h3>
+
+            <div class="container-info">
+                <div class="container-header">
+                    <button routerLink="/formRolesCreate/new">Agregar nuevo Rol</button>
+                </div>
+                <div class="container-acordeon">
+                    @for (rol of result?.roles; track rol.id) {
+                        @if (rol.status === 'active') {
+                            <details >
+                                <summary> 
+                                    <div class="profile-acordeon">
+                                        <div class="text-acordeon">
+                                            <h4> {{rol.name}} </h4>
+                                        </div>
+                                        <div class="buttons-acordeon">
+                                            <a routerLink="/formRolesCreate/{{rol.id}}">
+                                                <img src="../../assets/Icons/MdiFileDocumentEditOutline.svg" alt="Editar">
+                                                <span class="tooltip">Editar</span>
+                                            </a>
+                                            <a (click)="DeleteRoles(rol.id)">
+                                                <img src="../../assets/Icons/MdiDeleteOutline.svg" alt="Eliminar">
+                                                <span class="tooltip">Eliminar</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </summary>
+            
+                                <div class="details-acordeon">
+                                    <p> {{rol.description}} </p>
+                                    @for ( action of rol.actions ; track action.id) {
+                                        <p> {{ action.name }} </p>
+                                    }@empty {
+                                        <p> no existe</p>
+                                    }
+                                    
+                                </div>
+                            </details>
+
+
+
+                        }
+                    }
+                </div>
+            </div>
+    </div>
+
