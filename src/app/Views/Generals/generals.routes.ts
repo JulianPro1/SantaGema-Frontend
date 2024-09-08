@@ -22,7 +22,7 @@ export const GENERALS_ROUTES: Routes = [
             },
             {
                 path:'afiliados', 
-                title:'Modulo det tabla para afiliados',
+                title:'tabla para afiliados',
                 loadComponent: () => import('./gestion-afiliado/gestion-afiliado.component')
             },
             {
@@ -41,10 +41,19 @@ export const GENERALS_ROUTES: Routes = [
                 loadComponent: () => import('./gestion-roles/gestion-roles.component')
             },
             {
+                path:'formRolesCreate/:id', 
+                title:'Formulario de Creacion de Roles',
+                loadComponent: () => import('../roles-create/roles-create.component')
+            },
+            {
                 path:'gestionUsuarios', 
                 title:'Modulo Gestion de Usuarios',
                 loadComponent: () => import('./gestion-usuarios/gestion-usuarios.component')
             },
         ]
+    },
+    {
+        path:'dashboard',
+        loadComponent: () => import('../facturacion-dash/facturacion-dash.component')
     }
 ];

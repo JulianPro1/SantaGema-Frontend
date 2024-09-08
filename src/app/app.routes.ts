@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { AsideBarComponent } from './Shared/aside-bar/aside-bar.component';
 
 export const routes: Routes = [
     {
