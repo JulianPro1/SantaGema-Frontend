@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { AsideBarComponent } from "../../aside-bar/aside-bar.component";
 import { H1Component } from "../../h1/h1.component";
 import { H2Component } from "../../h2/h2.component";
-import AccionesCreateComponent from "../../../Views/acciones-create/acciones-create.component";
+import AccionesCreateComponent from "../../../Views/View-Forms/acciones-create/acciones-create.component";
 import { InputTextComponent } from "../input-text/input-text.component";
 import { TextareaComponent } from "../textarea/textarea.component";
 import { ButtonComponent } from "../../button/button.component";

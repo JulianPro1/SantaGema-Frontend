@@ -19,5 +19,4 @@ export const routes: Routes = [
         title:'Pagina erronea',
         loadComponent: () => import('./Autentication/login/login.component')
     }
-  
 ];

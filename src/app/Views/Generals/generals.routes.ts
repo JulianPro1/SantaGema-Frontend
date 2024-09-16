@@ -43,7 +43,7 @@ export const GENERALS_ROUTES: Routes = [
             {
                 path:'formRolesCreate/:id', 
                 title:'Formulario de Creacion de Roles',
-                loadComponent: () => import('../roles-create/roles-create.component')
+                loadComponent: () => import('../View-Forms/roles-create/roles-create.component')
             },
             {
                 path:'gestionUsuarios', 

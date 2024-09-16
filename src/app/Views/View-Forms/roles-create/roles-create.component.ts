@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AsideBarComponent } from "../../Shared/aside-bar/aside-bar.component";
-import { FormRolesCreateComponent } from "../../Shared/forms/form-roles-create/form-roles-create.component";
+import { AsideBarComponent } from "../../../Shared/aside-bar/aside-bar.component";
+import { FormRolesCreateComponent } from "../../../Shared/forms/form-roles-create/form-roles-create.component";
 
 @Component({
   selector: 'app-roles-create',
