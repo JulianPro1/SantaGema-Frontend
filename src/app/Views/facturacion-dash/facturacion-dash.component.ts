@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
-import { AsideBarComponent } from "../../Shared/aside-bar/aside-bar.component";
+import { Component} from '@angular/core';
+import { NgStyle, NgClass } from "@angular/common";
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-facturacion-dash',
   standalone: true,
-  imports: [AsideBarComponent],
+  imports: [MatDividerModule,MatIconModule,MatButtonModule,NgClass,NgStyle],
   templateUrl: './facturacion-dash.component.html',
   styleUrl: './facturacion-dash.component.css'
 })

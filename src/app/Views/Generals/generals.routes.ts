@@ -50,10 +50,16 @@ export const GENERALS_ROUTES: Routes = [
                 title:'Modulo Gestion de Usuarios',
                 loadComponent: () => import('./gestion-usuarios/gestion-usuarios.component')
             },
+            {
+                path:'dashboard',
+                loadComponent: () => import('../facturacion-dash/facturacion-dash.component')
+            }
         ]
     },
     {
-        path:'dashboard',
-        loadComponent: () => import('../facturacion-dash/facturacion-dash.component')
+        path:'home',
+        redirectTo:'/home/dashboard',
+        pathMatch:'full'
     }
+
 ];
