@@ -51,6 +51,11 @@ export const GENERALS_ROUTES: Routes = [
                 loadComponent: () => import('./gestion-usuarios/gestion-usuarios.component')
             },
             {
+                path:'formUsuariosCreate/:id',
+                title:'Formulario de Creacion de Usuarios',
+                loadComponent: () => import('../View-Forms/gestion-usuarios-create/gestion-usuarios-create.component')
+            },
+            {
                 path:'dashboard',
                 loadComponent: () => import('../facturacion-dash/facturacion-dash.component')
             }

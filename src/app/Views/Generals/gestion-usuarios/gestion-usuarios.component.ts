@@ -4,6 +4,7 @@ import { SearchBarComponent } from "../../../Shared/search-bar/search-bar.compon
 import { DataTableComponent } from "../../../Shared/data-table/data-table.component";
 import { H3Component } from "../../../Shared/h3/h3.component";
 import {ButtonComponent} from '../../../Shared/button/button.component'
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-gestion-usuarios',
@@ -13,13 +14,15 @@ import {ButtonComponent} from '../../../Shared/button/button.component'
     SearchBarComponent, 
     DataTableComponent, 
     H3Component,
-    ButtonComponent
+    ButtonComponent,
+    RouterLink
   ],
   templateUrl: './gestion-usuarios.component.html',
   styleUrl: './gestion-usuarios.component.css'
 })
 export default class GestionUsuariosComponent {
   arrayEncabezados:string[] = ['Nombre', 'Cedula', 'Rol', 'Fecha de Accion'];  
+  content:string = 'end'; 
 
 
 }

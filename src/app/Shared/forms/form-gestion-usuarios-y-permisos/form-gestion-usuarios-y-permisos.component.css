@@ -8,12 +8,90 @@
     border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+    gap: .5rem;
     
-
-    & * {
+    & form{
+        width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        padding: 1rem;
+        gap: 2rem;
+
+        & input{
+            background-color: #eeeeee;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            width: 50%;
+            padding: .5rem;
+            margin: 0 auto;
+            transition: .5s all;
+        }
+
+        & input:focus{
+            border: 1px solid rgb(10, 213, 10);
+        }
+
+        & ::placeholder{
+            padding: 0 .5rem;
+            letter-spacing: 1px;
+        }
+    
+        & .container-combobox{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            width: 50%;
+            height: 7rem;
+            border-radius: 10px;
+            overflow-y: scroll;
+            
+            & .combobox{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                color: #7b7b7b;
+                background-color: #eeeeee;
+                border-radius: 10px;
+                cursor: pointer;
+
+                & .combobox-btn{
+                    width: 100%;
+                    text-align: start;
+                    padding: .5rem .7rem;
+                }
+
+                & img{
+                    width: 3rem;
+                    height: 1.2rem;
+                }
+            }
+
+            & .content{
+                position: absolute;
+                top: -5%;
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #dbd6d6;
+                border-radius: 10px;
+
+                & li{
+                    width: 100%;
+                    padding: .5rem .7rem;
+                    text-align: start;
+                    list-style: none;
+                    transition: .5s all;
+                }
+
+                & li:hover{
+                    background-color: #757373;
+                }
+            }
+        }
     }
 }

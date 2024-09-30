@@ -18,7 +18,29 @@
         margin: 1rem 0;
         border-radius: 20px;
 
-        
+        & .container-header{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 .5rem;
+
+            & .button-custom{
+                width: 25%;
+                padding: .5rem;
+                letter-spacing: 2px;
+                border-radius: 20px;
+                color: white;
+                background-color: var(--senary-color);
+                cursor: pointer;
+            }
+
+            & .button-custom:hover{
+                background-color: #00357a;
+                transform: scale(1.05);
+            }
+        }
+
         & .container-dataTable{
             display: flex;
             flex-direction: column;

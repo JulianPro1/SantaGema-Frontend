@@ -2,12 +2,11 @@
     display: flex;
     justify-content: center;
     width: 100%;
-
+    
     & .btn {
         border: none;
         color: aliceblue;
         background-color: var(--senary-color);
-        padding: .5rem 0;
         border-radius: 20px;
         cursor: pointer;
     }
