@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { AuthGuard } from '../../Core/guards/auth.guard';
 
 
 export const GENERALS_ROUTES: Routes = [
@@ -21,7 +22,7 @@ export const GENERALS_ROUTES: Routes = [
                 loadComponent: () => import('./auditoria-usuarios/auditoria-usuarios.component')
             },
             {
-                path:'afiliados', 
+                path:'afiliados',
                 title:'tabla para afiliados',
                 loadComponent: () => import('./gestion-afiliado/gestion-afiliado.component')
             },
@@ -57,6 +58,7 @@ export const GENERALS_ROUTES: Routes = [
             },
             {
                 path:'dashboard',
+                //canActivate: [AuthGuard],
                 loadComponent: () => import('../facturacion-dash/facturacion-dash.component')
             }
         ]

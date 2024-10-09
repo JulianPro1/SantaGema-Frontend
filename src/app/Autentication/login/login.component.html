@@ -1,20 +1,17 @@
 <section class="container-login">
     <div class="container-form">
 
-        <form action="">
+        <form action="" [formGroup]="loginForm">
             <h1>Cooperativa <br />Santa Gema</h1>
             <h2>Registro</h2>
             <div class="container-inputs">
-                <input type="text" id="Usuario" placeholder="Usuario">
+                <input type="number" id="Usuario" placeholder="Usuario " formControlName="ci">
             </div>            
             <div class="container-inputs">
                 <!-- <label for="Contraseña">Contraseña</label> -->
-                <input type="password" id="Contraseña" placeholder="Contraseña">
+                <input type="password" id="Contraseña" placeholder="Contraseña" formControlName="password">
             </div>
-
-            
-
-            <app-button width="50%" tittle="Entrar"></app-button>
+            <app-button width="50%" tittle="Entrar" (click)="IniciarSesion()"></app-button>
 
         </form>
     </div>
