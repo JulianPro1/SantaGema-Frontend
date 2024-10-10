@@ -5,6 +5,10 @@ import { DataTableComponent } from "../../../Shared/data-table/data-table.compon
 import { H3Component } from "../../../Shared/h3/h3.component";
 import {ButtonComponent} from '../../../Shared/button/button.component'
 import { RouterLink } from "@angular/router";
+import { UsersService } from '../../../Core/services/users.service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { UsersGet } from '../../../Core/Interfaces/interfacesResponse/users';
+import { JsonPipe } from "@angular/common";
 
 @Component({
   selector: 'app-gestion-usuarios',
@@ -15,7 +19,8 @@ import { RouterLink } from "@angular/router";
     DataTableComponent, 
     H3Component,
     ButtonComponent,
-    RouterLink
+    RouterLink,
+    JsonPipe
   ],
   templateUrl: './gestion-usuarios.component.html',
   styleUrl: './gestion-usuarios.component.css'
@@ -23,6 +28,19 @@ import { RouterLink } from "@angular/router";
 export default class GestionUsuariosComponent {
   arrayEncabezados:string[] = ['Nombre', 'Cedula', 'Rol', 'Fecha de Accion'];  
   content:string = 'end'; 
+  userService$ = inject(UsersService);
+  user!:UsersGet
 
+  ngOnInit(){
+    this.userService$.getUsersAll().subscribe({
+      next: (resp) => {
+        this.user = resp
+        console.log(this.user)
+      },
+      error: (err:HttpErrorResponse) => {
+        console.log(err.error.message);
+      },
+    })
+  }
 
 }

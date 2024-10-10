@@ -15,7 +15,7 @@
             <p>Selecciones:</p>
             <ul>
                 @for (option of selectedOptions; track $index) {
-                <li>{{ option }}</li>
+                <li >{{ option }}</li>
                 }            
             </ul>
             <button class="btn" (click)="edit ? updateRol() : onSaveRol()">Añadir</button>

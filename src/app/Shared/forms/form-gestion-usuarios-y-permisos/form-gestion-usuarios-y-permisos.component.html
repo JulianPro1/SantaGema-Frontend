@@ -1,25 +1,26 @@
 <app-h1 tittle="Formulario"></app-h1>
 <div class="container"  >
     <app-h2 tittle="Crear Usuario"></app-h2>
-    <form action="" #main>
-        <input type="number" placeholder="Ingresar cedula">
-        <input type="text" placeholder="Ingresar nombre">
-        <input type="text" placeholder="Ingresar apellido">
-        <input type="password" placeholder="Ingresar contraseña">
+    <form action="" [formGroup]="userForm" #main>
+        <input type="number" placeholder="Ingresar cedula" formControlName="ci">
+        <input type="text" placeholder="Ingresar nombre" formControlName="name">
+        <input type="text" placeholder="Ingresar apellido" formControlName="lastname">
+        <input type="password" placeholder="Ingresar contraseña" formControlName="password">
 
         <div class="container-combobox">
             <div class="combobox">
-                <div class="combobox-btn" #comboboxBtn>Seleccionar un Rol</div>
+                <div class="combobox-btn" #comboboxBtn> Selecionar un Rol</div>
                 <img src="../../../../assets/Icons/MdiArrowDown.svg" alt="" #comboboxIcon>
             </div>     
             <ul class="content" #content>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>3</li>
+                @for (item of respRoles?.roles; track item.id) {
+                    @if (item.status === 'active') {
+                        <li (click)="obtenerRol(item.id)"> {{item.name}} </li>
+                    }
+                }
             </ul>
         </div>
 
-        <app-button tittle="Añadir Usuario" width="35%"></app-button>
+        <app-button tittle="Añadir Usuario" width="35%" (click)="edit ? editUser() : onSaveUser()" ></app-button>
     </form>
  </div>

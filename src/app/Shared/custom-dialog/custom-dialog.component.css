@@ -1,0 +1,98 @@
+:host{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    & dialog{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 40%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        padding: .2rem;
+        border-radius: 10px;
+        border: 1px solid red;
+
+        & img{
+            width: 12rem;
+        }
+
+        & .container-dialog{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            & .text-dialog{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .3rem;
+
+                & strong{
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    letter-spacing: 1px;
+                    text-transform: initial;
+                }
+
+                & p{
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    font-size: .7rem;
+                    text-align:center;
+                    text-wrap: balance;
+                    word-spacing: 1px;
+                    text-transform: initial;
+                }
+            }
+
+            & button{
+                align-self: self-end;
+                width: 25%;
+                padding: 3px;
+                background-color: transparent;
+                border: 1px solid blue;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+    
+            & button:hover{
+                color: white;
+                transform: scale(1.05);
+                background-color: #00357a;
+            }
+        }
+
+        & .exit-dialog{
+            position: relative;
+            left: .5rem;
+            bottom: .4rem;
+            align-self: self-start;
+            justify-self: self-start;
+            width: 4.5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+:host::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#000d, #000a);
+}
+
+

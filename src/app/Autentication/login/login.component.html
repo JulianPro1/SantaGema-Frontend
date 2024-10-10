@@ -5,16 +5,25 @@
             <h1>Cooperativa <br />Santa Gema</h1>
             <h2>Registro</h2>
             <div class="container-inputs">
-                <input type="number" id="Usuario" placeholder="Usuario " formControlName="ci">
+                <input type="number" id="Usuario" placeholder="cedula " formControlName="ci">
             </div>            
             <div class="container-inputs">
                 <!-- <label for="Contraseña">Contraseña</label> -->
                 <input type="password" id="Contraseña" placeholder="Contraseña" formControlName="password">
             </div>
             <app-button width="50%" tittle="Entrar" (click)="IniciarSesion()"></app-button>
-
         </form>
     </div>
     <div class="container-background">
     </div>
+    @if (!(respAlert$ |async)) {
+        <app-custom-dialog  ></app-custom-dialog> 
+    }
+    
+   
+
+  
 </section>
+
+
+

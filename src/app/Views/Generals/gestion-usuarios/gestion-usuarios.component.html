@@ -9,10 +9,36 @@
             </div>
 
             <div class="container-dataTable">
+                <div class="container-acordeon">
+                    @for (item of user?.users; track item.ci) {
+                        <details >
+                            <summary> 
+                                <div class="profile-acordeon">
+                                    <div class="text-acordeon">
+                                        <h4>{{item.name}}  {{item.lastname}} </h4>
+                                    </div>
+                                    <div class="buttons-acordeon">
+                                        <a routerLink="/home/formUsuariosCreate/{{item.ci}}">
+                                            <img src="../../assets/Icons/MdiFileDocumentEditOutline.svg" alt="Editar">
+                                            <span class="tooltip">Editar</span>
+                                        </a>
+                                        <a>
+                                            <img src="../../assets/Icons/MdiDeleteOutline.svg" alt="Eliminar">
+                                            <span class="tooltip">Eliminar</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </summary>
+                            <div class="details-acordeon">
+                                <p> {{item.ci}} </p>
+                                <p>{{item.role.name}} </p>
+                            </div>
+                        </details>
+                    }    
+                </div>
             </div>
             
         </div>    
         
-        <!-- ? aqui hay que buscarle un mejor lugar a este boton -->
  </div>
  

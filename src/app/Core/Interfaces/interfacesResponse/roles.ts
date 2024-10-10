@@ -1,7 +1,7 @@
 export interface Roles {
   message:string,
   roles: arrayRoles[],
-  role?: arrayRoles
+  role?: arrayRoles 
 }
 
 export interface arrayRoles{
@@ -14,6 +14,11 @@ export interface arrayRoles{
     actions: Permisos[]
 }
 
+export interface Rol{
+  actions:Permisos[],
+  description:string,
+  name:string 
+}
  export interface Permisos{
     id:number
     name:string,

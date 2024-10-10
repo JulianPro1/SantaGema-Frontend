@@ -61,7 +61,6 @@ export class FormRolesCreateComponent implements OnInit {
   });
 
   getRolId(id:number){
-    const objEdit = {Name:'', description: ''}
     this.RolesService.getRolesId(id).subscribe({ 
       next: (resp) =>{
         this.userForm.get('name')?.setValue(resp.role?.name);

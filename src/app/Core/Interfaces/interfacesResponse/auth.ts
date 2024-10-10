@@ -13,6 +13,9 @@ interface IobjUser{
     token:string,
 }
 
+export interface ErrorAuth{
+    message:string
+}
 export interface Login{
     ci:number,
     password:string

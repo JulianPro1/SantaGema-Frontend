@@ -50,6 +50,116 @@
             background-color: white;
             margin: .8rem 0 0 0;
             border-radius: 20px;
+
+            & .container-acordeon{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .5rem;
+                width: 100%;
+                padding: .5rem 1rem;
+    
+                & details{
+                    width: 100%;
+                    padding: .5rem .5rem ;
+                    background-color: #eeeeee;
+                    border-radius: 10px;
+                    border: 1px solid rgb(155, 155, 155);
+    
+                    & summary{ list-style: none; }
+    
+                    & .profile-acordeon{
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        width: 100%;
+                        padding: 0 1rem;
+                        gap: 1rem;
+    
+                        & .text-acordeon{
+                            width: 50%;
+                            padding: .2rem 0;
+                            white-space: nowrap;
+                            
+                            & h4{
+                                font-size: 1.2rem;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                                padding: .1rem 0;
+                            }
+                        }
+    
+                        & .buttons-acordeon {
+                            display: flex;
+                            justify-content: end;
+                            align-items: start;
+                            width: 50%;
+                            padding: 0 .5rem;
+                            gap: 1.5rem;
+                    
+                            & a {
+                                text-decoration: none;
+                                position: relative;
+                                cursor: pointer;
+                    
+                                & img {
+                                    width: 30px;
+                                    height: 30px;
+                                    border-radius: 50%;
+                                }
+
+                                & .tooltip {
+                                    display: none;
+                                    position: absolute;
+                                    left: -2rem;
+                                    right: -2rem;
+                                    bottom: 2.5rem;
+                                    z-index: 500;
+                                    text-align: center;
+                                    padding: .3rem .2rem;
+                                    border-radius: 10px;
+                                    font-size: .6rem;
+                                    color: white;
+                                    background-color: black;
+                                    transition: all .5s;
+                                    z-index: 10;
+                                }
+                    
+                                & .tooltip::after {
+                                    content: '';
+                                    position: absolute;
+                                    display: block;
+                                    left: calc(50% - 10px);
+                                    border-top: 10px solid black;
+                                    border-left: 10px solid transparent;
+                                    border-right: 10px solid transparent;
+                                    z-index: 10;
+                                }
+                            }
+                    
+                            & img:hover{
+                                transform: scale(1.10);
+                            }
+                    
+                            & a:hover .tooltip {
+                                display: inline-block;
+                                transition: all 1s;
+                            }
+                        }
+                    }
+    
+                    & .details-acordeon{
+                        width: 100%;
+    
+                        & p{
+                            padding: .5rem 1rem ;
+                        }
+                    }
+    
+    
+                }
+    
+            }
         }
     }
 }
