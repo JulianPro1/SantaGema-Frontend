@@ -15,7 +15,7 @@ export class UsersService {
   }
 
   getRolId(id:number){
-    return this._http.get<Users>(`${this.endpointURL}/${id}`).pipe( );
+    return this._http.get<UsersGet>(`${this.endpointURL}/${id}`).pipe( );
   }
 
   CreateUser(user:UsersSend){

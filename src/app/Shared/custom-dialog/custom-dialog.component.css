@@ -39,15 +39,16 @@
 
                 & strong{
                     font-weight: 700;
-                    font-size: 1.5rem;
+                    font-size: 1.4rem;
                     letter-spacing: 1px;
                     text-transform: initial;
+                    text-align:justify;
                 }
 
                 & p{
                     letter-spacing: 1px;
                     font-weight: 600;
-                    font-size: .7rem;
+                    font-size: .8rem;
                     text-align:center;
                     text-wrap: balance;
                     word-spacing: 1px;
@@ -92,7 +93,7 @@
     transform: translate(-50%,-50%);
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(#000d, #000a);
+    background: linear-gradient(rgba(7, 7, 7, 0.867), rgba(32, 32, 32, 0.867) );
 }
 
 

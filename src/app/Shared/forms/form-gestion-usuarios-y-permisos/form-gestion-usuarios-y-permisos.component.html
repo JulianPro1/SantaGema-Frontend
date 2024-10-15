@@ -9,13 +9,18 @@
 
         <div class="container-combobox">
             <div class="combobox">
-                <div class="combobox-btn" #comboboxBtn> Selecionar un Rol</div>
-                <img src="../../../../assets/Icons/MdiArrowDown.svg" alt="" #comboboxIcon>
+                @if (!SelectRolB) {
+                    <div class="combobox-btn" ngClass="activeText" #comboboxBtn> {{ SelectRolName}} </div>
+                    <img src="../../../../assets/Icons/MdiArrowDown.svg" alt="" #comboboxIcon>
+                }@else {
+                    <div class="combobox-btn" #comboboxBtn> {{ SelectRolName }} </div>
+                    <img src="../../../../assets/Icons/MdiArrowDown.svg" alt="" #comboboxIcon>
+                }
             </div>     
             <ul class="content" #content>
                 @for (item of respRoles?.roles; track item.id) {
                     @if (item.status === 'active') {
-                        <li (click)="obtenerRol(item.id)"> {{item.name}} </li>
+                        <li (click)="obtenerRol(item.id, item.name)"> {{item.name}} </li>
                     }
                 }
             </ul>

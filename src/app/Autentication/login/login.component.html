@@ -16,8 +16,8 @@
     </div>
     <div class="container-background">
     </div>
-    @if (!(respAlert$ |async)) {
-        <app-custom-dialog  ></app-custom-dialog> 
+    @if ((respAlert$ |async)) {
+        <app-custom-dialog></app-custom-dialog> 
     }
     
    

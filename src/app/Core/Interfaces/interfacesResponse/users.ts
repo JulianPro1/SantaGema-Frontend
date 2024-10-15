@@ -17,7 +17,8 @@ interface User{
 
 export interface UsersGet{
     message:string,
-    users: UserGet[]
+    users: UserGet[],
+    user?:UserGet
 }
 
 interface UserGet{

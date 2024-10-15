@@ -27,7 +27,7 @@ export default class LoginComponent {
   authService = inject(AuthService);
   navigation = inject(Router);
   alertService$ = inject(AlertsService)
-  respAlert$ = this.alertService$.getAlertLogin;
+  respAlert$ = this.alertService$.getAlertLogin
 
   constructor( ){
 
@@ -48,10 +48,10 @@ export default class LoginComponent {
          
         },
         error: (err:HttpErrorResponse) =>{
-          console.log(err)
+          console.log(err.error.message)
           this.navigation.navigateByUrl('/');
-          console.log('Usuario no existente');
-          
+          this.alertService$.setAlertLogin(true);
+          this.alertService$.setTextError(err.error.message);
         }
       }
     )

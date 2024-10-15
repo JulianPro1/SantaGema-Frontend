@@ -9,6 +9,7 @@ import { RolesService } from "../../../Core/services/roles.service";
 import { UsersService } from "../../../Core/services/users.service";
 import { Roles } from "../../../Core/Interfaces/interfacesResponse/roles";
 import { HttpErrorResponse } from '@angular/common/http';
+import { elementAt } from 'rxjs';
 
 @Component({
   selector: 'app-form-gestion-usuarios-y-permisos',
@@ -31,12 +32,14 @@ export class FormGestionUsuariosYPermisosComponent {
   userService$ = inject(UsersService);
   router = inject(Router);
   rutaDecision = inject(ActivatedRoute);
+  SelectRolB:boolean = true;
+  SelectRolName:string | undefined = 'Seleccionar un Rol';
 
 
-  @ViewChild('comboboxBtn') combobox!:ElementRef;
-  @ViewChild('comboboxIcon') icon!:ElementRef;
+  @ViewChild('comboboxBtn') combobox:ElementRef = new ElementRef('div');
+  @ViewChild('comboboxIcon') icon:ElementRef = new ElementRef('img');
   @ViewChild('main') dom!:ElementRef;
-  @ViewChild('content') menu!:ElementRef;
+  @ViewChild('content') menu:ElementRef = new ElementRef('ul');
 
   respRoles!:Roles;
   seleccionRol:number = 0;
@@ -50,17 +53,6 @@ export class FormGestionUsuariosYPermisosComponent {
     password: new FormControl(''),
     role_id: new FormControl('')
   });
-
-  @HostListener('document:click',['$event.target'])
-  clickbtn($event:HTMLElement):void{
-    if ($event === this.combobox.nativeElement || $event == this.icon.nativeElement) {
-      this.render2.setStyle(this.menu.nativeElement,'display','flex');
-    }
-    else if($event === this.dom.nativeElement){
-      this.render2.setStyle(this.menu.nativeElement,'display','none');
-    }
-    
-  }
   
   ngOnInit(){
     this.getRolesAll();
@@ -69,8 +61,19 @@ export class FormGestionUsuariosYPermisosComponent {
 
     if (id !== 'new') {
       this.edit = true
+      this.SelectRolB = false;
       this.getRolId(+id!);
     }
+  }
+
+  @HostListener('document:click',['$event.target'])
+  clickbtn($event:HTMLElement):void{
+      if ($event === this.combobox.nativeElement || $event == this.icon.nativeElement) {
+        this.render2.setStyle(this.menu.nativeElement,'display','flex');
+      }
+      else if($event === this.dom.nativeElement){
+        this.render2.setStyle(this.menu.nativeElement,'display','none');
+      }    
   }
 
   onSaveUser(){
@@ -107,6 +110,7 @@ export class FormGestionUsuariosYPermisosComponent {
         this.userForm.get('ci')?.setValue(resp.user?.ci);
         this.userForm.get('name')?.setValue(resp.user?.name);
         this.userForm.get('lastname')?.setValue(resp.user?.lastname);
+        this.SelectRolName = resp.user?.role.name;
       },
     })
   }
@@ -123,9 +127,11 @@ export class FormGestionUsuariosYPermisosComponent {
     });
   }
 
-  obtenerRol(rol:number){
+  obtenerRol(rol:number,rolName:string){
     this.seleccionRol = rol;
     this.userForm.get('role_id')?.setValue(this.seleccionRol);
     this.render2.setStyle(this.menu.nativeElement,'display','none');
+    this.SelectRolB = false;
+    this.SelectRolName = rolName;
   } 
 }

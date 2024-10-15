@@ -2,7 +2,7 @@
     <img src="../../assets/Icons/Alert.svg" alt="">
     <div class="container-dialog">
         <div class="text-dialog">
-            <strong>Ha ocurrido un Error!</strong>
+            <strong>{{ (textError | async)}} !</strong>
             <p>Se ha producido un error al intentar loguearse, por favor intentelo de nuevo.</p>
         </div>
     </div>
