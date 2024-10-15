@@ -10,6 +10,7 @@ import { UsersService } from "../../../Core/services/users.service";
 import { Roles } from "../../../Core/Interfaces/interfacesResponse/roles";
 import { HttpErrorResponse } from '@angular/common/http';
 import { elementAt } from 'rxjs';
+import { ButtonExitComponent } from "../../button-exit/button-exit.component";
 
 @Component({
   selector: 'app-form-gestion-usuarios-y-permisos',
@@ -21,7 +22,8 @@ import { elementAt } from 'rxjs';
     ReactiveFormsModule,
     H1Component,
     H2Component,
-    ButtonComponent
+    ButtonComponent,
+    ButtonExitComponent
 ],
   templateUrl: './form-gestion-usuarios-y-permisos.component.html',
   styleUrl: './form-gestion-usuarios-y-permisos.component.css'

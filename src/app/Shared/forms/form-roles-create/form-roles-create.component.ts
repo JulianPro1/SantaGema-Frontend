@@ -9,6 +9,7 @@ import { ModalRolesComponent } from '../modal-roles/modal-roles.component';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {  RolesService } from "../../../Core/services/roles.service";
 import { Router , ActivatedRoute} from "@angular/router";
+import { ButtonExitComponent } from "../../button-exit/button-exit.component";
 
 
 @Component({
@@ -21,8 +22,9 @@ import { Router , ActivatedRoute} from "@angular/router";
     ButtonComponent,
     CheckboxComponent,
     FormsModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    ButtonExitComponent
+],
   templateUrl: './form-roles-create.component.html',
   styleUrl: './form-roles-create.component.css'
 })

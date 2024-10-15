@@ -1,4 +1,7 @@
-
+:host{
+    width: 100%;
+    position: relative;
+}
 .container {
     margin: 0 auto;
     display: flex;
